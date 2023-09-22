@@ -31,13 +31,55 @@ Open Education is designed to provide greater accessibility for computer science
 
 ** **
 
-## 3.   Scope and Features Of The Project:
 
-The Scope places a boundary around the solution by detailing the range of features and functions of the project. This section helps to clarify the solution scope and can explicitly state what will not be delivered as well.
+## 3. Scope and Features of the Project: Testing OPE (Open Education Platform)
 
-It should be specific enough that you can determine that e.g. feature A is in-scope, while feature B is out-of-scope.
+### Scope
 
-** **
+1. **In-Scope:**
+
+   - **Setup-and-Build**: Building and pushing beta images to quay.io.
+   - **Health-Check**: Verifying container uptime.
+   - **Image-Version-Check**: Confirming correct image and tag.
+   - **JupyterNB-Test**: Checking package imports in Jupyter Notebook.
+   - **Package-Version-Test**: Version consistency of installed packages.
+   - **Checksum**: Validation of container image checksum.
+   - **Size-and-Time-Display**: Metrics for build time and image size.
+   - **UI-Test**: Functionality and layout checks using Selenium.
+   - **GDB-Test**: GDB functionality validation.
+   - **Approval**: Authorization process.
+   - **Publish**: Publishing the stable image to OPE's quay.io repo.
+
+2. **Out-of-Scope:**
+
+   - Code development for OPE features.
+   - Infrastructure setup for Mass Open Cloud.
+   - Content creation for educational material.
+   - Manual quality assurance tests.
+
+### Features
+
+1. **Comprehensive Testing**: The Master_Container_Test.yml serves as the core feature that includes all relevant image, build, gdb, and UI tests.
+   
+2. **Automation and Build**: Automating image build, versioning, and pushing to the registry.
+
+3. **Health Metrics**: Periodic health check-ups to ensure container functionality.
+
+4. **Package and Version Consistency**: Automated checks for software versions against a predefined list (versions.txt).
+
+5. **UI Validation**: Selenium-based tests for interface and visual elements in Jupyter Notebook.
+
+6. **GDB Functionality**: Automated bash scripts for validating GDB functionality 100 times.
+
+7. **Security Checks**: Ensuring checksum integrity of the container image.
+
+8. **Metrics Display**: Real-time display of build time and size.
+
+9. **Approval Mechanism**: A feature to send and receive authorization approvals.
+
+10. **Publication**: Publishing the approved, stable image to OPE’s quay.io repository.
+
+This scope and features list aligns with the goals to provide a robust, reliable, and secure open education platform. It leverages modern open-source technologies and has received support from the Red Hat Collaboratory Research Incubation Award program. The focus is on automating and validating every critical aspect of the containerized environment OPE relies on.
 
 ## 4. Solution Concept
 
