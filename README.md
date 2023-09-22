@@ -108,7 +108,7 @@ Stretch goals:
 
 Release planning section describes how the project will deliver incremental sets of features and functions in a series of releases to completion. Identification of user stories associated with iterations that will ease/guide sprint planning sessions is encouraged. Higher level details for the first iteration is expected.
 
-1. **Also build container on a cluster (either NERC or test cluster). Verify and expand upon all of OPE textbook (8 tests)**
+1. **Build container on a cluster (either NERC or test cluster). Verify and expand upon all of OPE textbook (8 tests)**
    - Build and deploy the container on a cluster, verify that it can run.
    - Rewrite Makefile and Dockerfile to work independent of ISA of system (arm64, x86). Should raise errors for incompatible packages with ISA (e.g. GDB not supported for ARM, stop build             process).
    - Go through OPE-Testing/.github/workflows/Master_Container_Test.yaml, test existing tests for missed edge cases (with a focus on GDB, and package version tests)
