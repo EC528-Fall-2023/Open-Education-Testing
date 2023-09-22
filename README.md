@@ -45,7 +45,7 @@ Open Education is designed to provide greater accessibility for computer science
 ### Scope
 
 1. **In-Scope:**
-
+   - **Code Development for OPE Features**: Creating and improving features within the OPE platform.
    - **Setup-and-Build**: Building and pushing beta images to quay.io.
    - **Health-Check**: Verifying container uptime.
    - **Image-Version-Check**: Confirming correct image and tag.
@@ -59,8 +59,6 @@ Open Education is designed to provide greater accessibility for computer science
    - **Publish**: Publishing the stable image to OPE's quay.io repo.
 
 2. **Out-of-Scope:**
-
-   - Code development for OPE features.
    - Infrastructure setup for Mass Open Cloud.
    - Content creation for educational material.
    - Manual quality assurance tests.
