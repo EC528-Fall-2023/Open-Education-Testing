@@ -84,7 +84,7 @@ Open Education is designed to provide greater accessibility for computer science
 ![](images/diagram.png)
 
 
-Throughout the duration of this project, we will be contributing directly to open education tests. These tests directly involve the functionality of jupyter notebooks and other supported platforms. These tests do not involve server-side support, such as containerized support and remote access.
+Throughout the duration of this project, we will be contributing directly to open education tests. These tests directly involve the functionality of jupyter notebooks and other supported platforms. They do not involve server-side support, such as containerized support and remote access.
  
  
 
