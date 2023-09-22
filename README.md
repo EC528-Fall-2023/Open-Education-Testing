@@ -81,17 +81,12 @@ Open Education is designed to provide greater accessibility for computer science
 
 ## 4. Solution Concept
 
-This section provides a high-level outline of the solution.
+![](images/diagram.png)
 
-Global Architectural Structure Of the Project:
 
-This section provides a high-level architecture or a conceptual diagram showing the scope of the solution. If wireframes or visuals have already been done, this section could also be used to show how the intended solution will look. This section also provides a walkthrough explanation of the architectural structure.
-
+Throughout the duration of this project, we will be contributing directly to open education tests. These tests directly involve the functionality of jupyter notebooks and other supported platforms. These tests do not involve server-side support, such as containerized support and remote access.
  
-
-Design Implications and Discussion:
-
-This section discusses the implications and reasons of the design decisions made during the global architecture design.
+ 
 
 ## 5. Acceptance criteria
 
