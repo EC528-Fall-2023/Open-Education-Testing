@@ -96,12 +96,32 @@ Throughout the duration of this project, we will be contributing directly to ope
 
 ## 5. Acceptance criteria
 
-This section discusses the minimum acceptance criteria at the end of the project and stretch goals.
+Minimum acceptance criteria: 
+   - The tests ensure that the base container only passes the build process if all of the packages are compatible and fully functioning, the address randomization works (need to clarify more on      this), and all of the dynamic content functions as intended.
+   - Successfully deploy base container to NERC or some test cluster.
+   - Implement all of the ope commands listed in the OPE-Testing *tools* branch as described by Professor Appavoo to allow for a more user-friendly framework for content creation. Also, add          necessary documentation for these commands.
+
+Stretch goals: 
+   - Add tool for translating textbooks written in LaTeX into the Jupyter Notebook format so that they can be hosted online and provide additional functionality by incorporating the suite of         Jupyter tools.
 
 ## 6.  Release Planning:
 
 Release planning section describes how the project will deliver incremental sets of features and functions in a series of releases to completion. Identification of user stories associated with iterations that will ease/guide sprint planning sessions is encouraged. Higher level details for the first iteration is expected.
 
+1. **Also build container on a cluster (either NERC or test cluster). Verify and expand upon all of OPE textbook (8 tests)**
+   - Build and deploy the container on a cluster, verify that it can run.
+   - Rewrite Makefile and Dockerfile to work independent of ISA of system (arm64, x86). Should raise errors for incompatible packages with ISA (e.g. GDB not supported for ARM, stop build             process).
+   - Go through OPE-Testing/.github/workflows/Master_Container_Test.yaml, test existing tests for missed edge cases (with a focus on GDB, and package version tests)
+2. **Expand upon testing for RISE, write testing for Address randomization.**
+   - Write address randomization tests using gdb.
+   - Add onto selenium tests with RISE, look for missed edge cases.
+3. **Write multimedia and terminal verification tests**
+   - Wrtie tests (maybe in Selenium?) for multimedia players and dynamic content. Also, write some tests to ensure the terminal functions as required.
+4. **Add functionality for ope commands listed by appavoo in tools branch**
+   - Meet with Professor Appavoo (or send an email, but ideally meet) to ask for clarification where needed on the commands and verify our understanding is correct for each.
+5. **Write code to translate LaTeX projects into OPE Jupyter NB framework**
+   - At least start the framework for this. A professor who already wrote their textbook in LaTeX wants an easy migration to this platform to reap all the benefits of the OPE features and            hosting it online, but the barrier to entry is all the work of rewriting.
+   - Write this code with pandoc and bash, maybe python too to parse sections of LaTeX and use *ope tools* developed in sprint 4 to make this process easier.
 ** **
 
 ## General comments
@@ -109,5 +129,3 @@ Release planning section describes how the project will deliver incremental sets
 Remember that you can always add features at the end of the semester, but you can't go back in time and gain back time you spent on features that you couldn't complete.
 
 ** **
-
-
