@@ -79,8 +79,6 @@ Open Education is designed to provide greater accessibility for computer science
 
 10. **Publication**: Publishing the approved, stable image to OPE’s quay.io repository.
 
-This scope and features list aligns with the goals to provide a robust, reliable, and secure open education platform. It leverages modern open-source technologies and has received support from the Red Hat Collaboratory Research Incubation Award program. The focus is on automating and validating every critical aspect of the containerized environment OPE relies on.
-
 ## 4. Solution Concept
 
 This section provides a high-level outline of the solution.
