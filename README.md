@@ -2,7 +2,10 @@
 
 ## Project Description
 
-This document outlines the core aspects of an educational technology project, focusing on the integration of Jupyter notebooks and Linux terminal activities to enrich the learning experience. The document serves as a foundational roadmap for the project team, mentors, and stakeholders. It specifies the project's vision, the problem-solving approach, the scope of work, and the desired outcomes and goals. It aims to unify the project team’s understanding and set the expectations for stakeholders.
+This project focuses on enriching educational technology through the integration of Jupyter notebooks and Linux terminal activities. Intended for students, educators, and infrastructure developers.
+
+**Team Members**: Yuxi Ge, Jonathan Mikalov, Riya Deokar, Ross Mikulskis, Yiqin Zhang
+**Mentor**: Isaiah Stapleton
 
 ---
 
