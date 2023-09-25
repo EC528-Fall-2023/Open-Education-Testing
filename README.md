@@ -1,13 +1,11 @@
----
 
 ## Project Description
 
 This project focuses on enriching educational technology through the integration of Jupyter notebooks and Linux terminal activities. Intended for students, educators, and infrastructure developers.
 
 **Team Members**: Yuxi Ge, Jonathan Mikalov, Riya Deokar, Ross Mikulskis, Yiqin Zhang
-**Mentor**: Isaiah Stapleton
 
----
+**Mentor**: Isaiah Stapleton
 
 ## 1.   Vision and Goals Of The Project:
 
