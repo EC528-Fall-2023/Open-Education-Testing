@@ -23,10 +23,14 @@ Training and Skill Development: We recognize the importance of equipping our tea
 
 ## 2. Users/Personas Of The Project:
 
-Open Education is designed to provide greater accessibility for computer science educators and students. Users will have an easy method of distributing their content from a virtual environment through open source material. This is included but may not be limited to online textbooks, lectures, machine learning tools, as well as interactive kernel environments. Hosts of large computer science events (ie. hackathons) will also be able to use this online platform to provide a consistent environment among each user, with the same packages for everyone. Users of this platform may include but are not limited to:
-* Educators within any field of computer science or engineering
-* Authors looking to publish free open-source textbooks online
-* Students involved in large computer science activites or events
+Open Education Testing offers a comprehensive Testing Integration suite designed to cover a broad range of scenarios and edge cases. This approach ensures the thorough validation of the base container image in the OPE repository. Embrace technological progress by utilizing automation, efficient continuous integration, deployment, and scalable frameworks. 
+
+Users of this platform may include but are not limited to:
+
+* Educators: These professionals in Computer Science or Engineering require specialized features within the OPE containers, like UID fixes, to cater to the unique requirements of their teaching modules.
+* Content Creators: Individuals keen on publishing open-source textbooks online. They focus on tailoring and enhancing educational content to fit seamlessly with the specific needs of containerized environments.
+* Developers: Those aspiring to craft robust containers tailored to support the OPE environment efficiently.
+
 
 ** **
 
