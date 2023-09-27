@@ -31,6 +31,33 @@ Users of this platform may include but are not limited to:
 * Content Creators: Individuals keen on publishing open-source textbooks online. They focus on tailoring and enhancing educational content to fit seamlessly with the specific needs of containerized environments.
 * Developers: Those aspiring to craft robust containers tailored to support the OPE environment efficiently.
 
+1. **Educator - Professor Emily:**
+- Background and Role: Professor Emily is an experienced educator teaching computer systems courses. She relies on the Open Education platform to provide high-quality educational materials to her students.
+- Needs and Goals: Emily needs a reliable and secure environment for her students to access Jupyter notebooks and interact with Linux terminals. She also values easy customization options for tailoring materials to her course.
+- Challenges: Ensuring the security of the platform is crucial, especially when dealing with students' educational data.
+2. **Student - Alex:**
+- Background and Role: Alex is a computer science student using the Open Education platform to learn about computer systems.
+- Needs and Goals: Alex expects a user-friendly interface, interactive Jupyter notebooks, and access to Linux terminals for practical learning. They rely on the platform's testing capabilities to assess their understanding.
+- Challenges: Alex needs a seamless learning experience and a reliable testing environment to grasp complex concepts.
+3. **IT Administrator - Sarah:**
+- Background and Role: Sarah is responsible for managing the IT infrastructure of the educational institution using the Open Education platform.
+- Needs and Goals: Sarah needs robust testing and container management features to ensure the platform's reliability. She values automation to simplify administrative tasks.
+- Challenges: Balancing security and accessibility in an educational environment is her primary challenge.
+4. **Cybersecurity Researcher - Dr. Roberta:**
+- Background and Role: Dr. Roberta is a cybersecurity researcher who uses the Open Education platform to study security-related topics.
+- Needs and Goals: Roberta relies on Address Space Layout Randomization (ASLR) for her research. She needs a secure and customizable environment to conduct experiments, validate findings, and ensure data privacy.
+- Challenges: Keeping her research environment secure while exploring new security features is crucial for her work.
+5. **Data Science Enthusiast - Ricky:**
+- Background and Role: Ricky is passionate about data science and uses the Open Education platform to gain practical skills.
+- Needs and Goals: Ricky requires access to packages, GDB for debugging, and version control for data analysis. He values a seamless user experience.
+- Challenges: Ricky aims to balance data confidentiality and performance in his data analysis projects.
+6. **UI/UX Designer - Lily:**
+- Background and Role: Lily is a UI/UX designer who uses the Open Education platform to assess and improve the user interface.
+- Needs and Goals: Lily relies on UI validation and Selenium-based tests to ensure a user-friendly experience in Jupyter notebooks.
+- Challenges: Maintaining consistency and visual appeal in educational materials while accommodating diverse user needs is her primary challenge.
+
+These user personas represent a diverse set of users who can benefit from the functionalities of the Open Education project. Each persona has unique needs, goals, and challenges that the project can address to enhance the educational experience.
+
 
 ** **
 
