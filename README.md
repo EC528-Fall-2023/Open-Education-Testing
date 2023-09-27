@@ -86,6 +86,22 @@ Users of this platform may include but are not limited to:
 
 
 Throughout the duration of this project, we will be contributing directly to open education tests. These tests directly involve the functionality of jupyter notebooks and other supported platforms. They do not involve server-side support, such as containerized support and remote access.
+
+1. **Quay.io
+- In order to deal with maintaingin a reliable and accessible educational platform while maintaining a strong infrastructure for development and testing, we use Quay.io.
+- Quay.io plays a vital role in our container management strategy. We utilize Quay.io to securely host and distribute our container images, including the OPE repository base container image.
+- This platform enables version control, streamlined collaboration, efficient repository management, and improved accessibility for educators and students. Our Quay.io is in the process of being associated with the correct user and container, ensuring clarity and ease of use for all project collaborators.
+
+2. **Address Space Layout Randomization
+- We intend to prioritize cybersecurity through the strategic use of Address Space Layout Randomization (ASLR).
+- We will assess ASLR's capability to mitigate memory-based vulnerabilities by introducing controlled vulnerabilities and evaluating their resistance to exploitation.
+- We will confirm the randomness of memory addresses, ensuring predictability is minimized.
+- By integrating ASLR testing, we bolster OPE's cybersecurity, mitigate exploits, and protect user data while fostering long-term security for the educational platform.
+
+3. ** Environment Specific Tests
+- We're enhancing our testing approach by crafting environment-specific testing scripts
+- Tailoring the solution makes our tests more robust, addressing critical aspects like ASLR, user ID generation, and unique user limits within the NERF environment.
+- These scripts ensure comprehensive validation, adaptability to evolving conditions, and resilience in our educational platform, reinforcing our commitment to meeting project-specific requirements effectively.
  
  
 
