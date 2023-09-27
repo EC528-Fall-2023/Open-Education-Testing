@@ -103,10 +103,11 @@ Stretch goals:
 
 Release planning section describes how the project will deliver incremental sets of features and functions in a series of releases to completion. Identification of user stories associated with iterations that will ease/guide sprint planning sessions is encouraged. Higher level details for the first iteration is expected.
 
-1. **Build container on a cluster (either NERC or test cluster). Verify and expand upon all of OPE textbook (8 tests)**
-   - Build and deploy the container on a cluster, verify that it can run.
-   - Rewrite Makefile and Dockerfile to work independent of ISA of system (arm64, x86). Should raise errors for incompatible packages with ISA (e.g. GDB not supported for ARM, stop build             process).
-   - Go through OPE-Testing/.github/workflows/Master_Container_Test.yaml, test existing tests for missed edge cases (with a focus on GDB, and package version tests)
+1. **Build OPE Base Image and Container Locally and Verify Testing Procedures (8 tests)**
+   - Construct the OPE base image both locally. Ensure the image is functional and can run seamlessly.
+   - Familiarize with the Makefile and Dockerfile and Gain a comprehensive understanding of their structures and functionalities to aid in future modifications.
+   - Refactor the Makefile and Dockerfile to ensure system independence and compatibility across various Instruction Set Architectures, specifically arm64 and x86.
+   - Navigate to the workflow file located at OPE-Testing/.github/workflows/Master_Container_Test.yaml. Run the predefined tests and assess their performance, ensuring all tests function as expected.
 2. **Expand upon testing for RISE, write testing for Address randomization.**
    - Write address randomization tests using gdb.
    - Add onto selenium tests with RISE, look for missed edge cases.
