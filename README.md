@@ -108,9 +108,10 @@ These user personas represent a diverse set of users who can benefit from the fu
 10. **Publication**: Publishing the approved, stable image to OPE’s quay.io repository.
 
 ## 4. Solution Concept
+Current Architecture
+<img width="1154" alt="Screen Shot 2023-10-11 at 6 40 20 PM" src="https://github.com/EC528-Fall-2023/Open-Education-Testing/assets/47408944/b29146ad-9107-4555-99cd-48d6e5858f52">
 
 ![](images/diagram.png)
-
 
 Throughout the duration of this project, we will be contributing directly to open education tests. These tests directly involve the functionality of jupyter notebooks and other supported platforms. They do not involve server-side support, such as containerized support and remote access.
 
