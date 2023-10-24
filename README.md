@@ -171,6 +171,8 @@ Release planning section describes how the project will deliver incremental sets
 
 - **[Sprint 1 Recording](https://drive.google.com/file/d/1SKNGodw3gZbhzO0-K-_QMrUeJU3uBJo4/view?usp=sharing)**
 - **[Sprint 2 Recording](https://drive.google.com/file/d/1lJqYb4c8eatcnu1teSPzbsKXZmZMlphi/view?usp=sharing)**
+- **[Sprint 3 Recording](https://drive.google.com/file/d/1Iy90VqmvtLN4ZKXjmvYmGfP7ebv0lfrO/view?usp=drivesdk)
 
 ## Slides
 - **[Sprint 2 Slides](https://docs.google.com/presentation/d/1fL5fSKnzFHu7jynSGlMBzb1nYSS9v-ooWViMfuFNXDw/edit?usp=sharing)**
+- **[Sprint 3 Slides](https://docs.google.com/presentation/d/1KDC8MQQU-c8FvkvjlLuOMwSis7lFfOR7dl87srLiVJI/edit)
