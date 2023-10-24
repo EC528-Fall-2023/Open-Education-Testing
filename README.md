@@ -59,8 +59,6 @@ Users of this platform may include but are not limited to:
 These user personas represent a diverse set of users who can benefit from the functionalities of the Open Education project. Each persona has unique needs, goals, and challenges that the project can address to enhance the educational experience.
 
 
-** **
-
 
 ## 3. Scope and Features of the Project: Testing OPE (Open Education Platform)
 
@@ -107,11 +105,16 @@ These user personas represent a diverse set of users who can benefit from the fu
 
 10. **Publication**: Publishing the approved, stable image to OPE’s quay.io repository.
 
-## 4. Solution Concept
-Current Architecture
-<img width="1154" alt="Screen Shot 2023-10-11 at 6 40 20 PM" src="https://github.com/EC528-Fall-2023/Open-Education-Testing/assets/47408944/b29146ad-9107-4555-99cd-48d6e5858f52">
+    
 
-![](images/diagram.png)
+## 4. Solution Concept
+**Architecture**
+
+![](images/A1.png)
+
+![](images/A2.png)
+
+
 
 Throughout the duration of this project, we will be contributing directly to open education tests. These tests directly involve the functionality of jupyter notebooks and other supported platforms. They do not involve server-side support, such as containerized support and remote access.
 
@@ -130,18 +133,20 @@ Throughout the duration of this project, we will be contributing directly to ope
 - We're enhancing our testing approach by crafting environment-specific testing scripts
 - Tailoring the solution makes our tests more robust, addressing critical aspects like ASLR, user ID generation, and unique user limits within the NERF environment.
 - These scripts ensure comprehensive validation, adaptability to evolving conditions, and resilience in our educational platform, reinforcing our commitment to meeting project-specific requirements effectively.
- 
+
  
 
 ## 5. Acceptance criteria
 
 Minimum acceptance criteria: 
-   - The tests ensure that the base container only passes the build process if all of the packages are compatible and fully functioning, the address randomization works (need to clarify more on      this), and all of the dynamic content functions as intended.
+   - Develop a Test Notebook Template. The tests ensure that the base container only passes the build process if all of the packages are compatible and fully functioning, the address randomization works (need to clarify more on this), and all content functions as intended.
    - Successfully deploy base container to NERC or some test cluster.
-   - Implement all of the ope commands listed in the OPE-Testing *tools* branch as described by Professor Appavoo to allow for a more user-friendly framework for content creation. Also, add          necessary documentation for these commands.
+   - Implement all of the ope commands listed in the OPE-Testing *tools* branch as described by Professor Appavoo to allow for a more user-friendly framework for content creation. Also, add necessary documentation for these commands.
 
 Stretch goals: 
-   - Add tool for translating textbooks written in LaTeX into the Jupyter Notebook format so that they can be hosted online and provide additional functionality by incorporating the suite of         Jupyter tools.
+   - Add tool for translating textbooks written in LaTeX into the Jupyter Notebook format so that they can be hosted online and provide additional functionality by incorporating the suite of Jupyter tools.
+
+     
 
 ## 6.  Release Planning:
 
@@ -151,15 +156,15 @@ Release planning section describes how the project will deliver incremental sets
    - Construct the OPE base image both locally. Ensure the image is functional and can run seamlessly.
    - Familiarize with the Makefile and Dockerfile and Gain a comprehensive understanding of their structures and functionalities to aid in future modifications.
    - Refactor the Makefile and Dockerfile to ensure system independence and compatibility across various Instruction Set Architectures, specifically arm64 and x86.
-   - Navigate to the workflow file located at OPE-Testing/.github/workflows/Master_Container_Test.yaml. Run the predefined tests and assess their performance, ensuring all tests function as expected.
+   - Navigate to the workflow file located at `OPE-Testing/.github/workflows/Master_Container_Test.yaml`. Run the predefined tests and assess their performance, ensuring all tests function as expected.
 2. **Create test notebook template for building/running OPE**
    - Write address randomization tests using gdb.
    - Test home directory, read/write permissions
    - Check pip install and configuration files
    - Perform UID / GID checks to ensure permission compatability
 3. **Revise OPE Tests with Exception Handling and Standardize Tests**
-   - Using the previously written tests, include exception handling to inform developer of build issues
-   - Merge tests into one notebook, standardizing under a common framework to properly report errors
+   - Enhance existing tests with robust exception handling to provide developers with clear indications of build issues or failures.
+   - Merge tests into one single notebook, standardizing under a common framework to properly report errors
 4. **Add functionality for ope commands listed by appavoo in tools branch**
    - Meet with Professor Appavoo (or send an email, but ideally meet) to ask for clarification where needed on the commands and verify our understanding is correct for each.
 5. **Write code to translate LaTeX projects into OPE Jupyter NB framework**
