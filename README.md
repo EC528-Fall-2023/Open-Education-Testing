@@ -152,11 +152,14 @@ Release planning section describes how the project will deliver incremental sets
    - Familiarize with the Makefile and Dockerfile and Gain a comprehensive understanding of their structures and functionalities to aid in future modifications.
    - Refactor the Makefile and Dockerfile to ensure system independence and compatibility across various Instruction Set Architectures, specifically arm64 and x86.
    - Navigate to the workflow file located at OPE-Testing/.github/workflows/Master_Container_Test.yaml. Run the predefined tests and assess their performance, ensuring all tests function as expected.
-2. **Expand upon testing for RISE, write testing for Address randomization.**
+2. **Create test notebook template for building/running OPE**
    - Write address randomization tests using gdb.
-   - Add onto selenium tests with RISE, look for missed edge cases.
-3. **Write multimedia and terminal verification tests**
-   - Write tests (maybe in Selenium?) for multimedia players and dynamic content. Also, write some tests to ensure the terminal functions as             required.
+   - Test home directory, read/write permissions
+   - Check pip install and configuration files
+   - Perform UID / GID checks to ensure permission compatability
+3. **Revise OPE Tests with Exception Handling and Standardize Tests**
+   - Using the previously written tests, include exception handling to inform developer of build issues
+   - Merge tests into one notebook, standardizing under a common framework to properly report errors
 4. **Add functionality for ope commands listed by appavoo in tools branch**
    - Meet with Professor Appavoo (or send an email, but ideally meet) to ask for clarification where needed on the commands and verify our understanding is correct for each.
 5. **Write code to translate LaTeX projects into OPE Jupyter NB framework**
