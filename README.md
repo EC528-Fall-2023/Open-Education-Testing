@@ -172,6 +172,15 @@ Release planning section describes how the project will deliver incremental sets
    - Write this code with pandoc and bash, maybe python too to parse sections of LaTeX and use *ope tools* developed in sprint 4 to make this process easier.
 ** **
 
+Here are a couple repos that are important to our project, forked from the OPE repos:
+- [https://github.com/rkulskis/ope-quay](https://github.com/rkulskis/ope-quay) (fork of [https://github.com/OPEFFORT/OPE-Testing](https://github.com/OPEFFORT/OPE-Testing)) 
+for working on ope CLI tool and image build process tests
+- [https://github.com/rkulskis/content-examples](https://github.com/rkulskis/content-examples) (fork of [https://github.com/OPEFFORT/content-examples](https://github.com/OPEFFORT/content-examples))
+repo to be pulled by default with the ope CLI tool for textbook creation,
+we added our jupyter .ipynb test notebook. Users can run it simply with `ope test`
+
+
+
 ## Videos
 
 - **[Sprint 1 Recording](https://drive.google.com/file/d/1SKNGodw3gZbhzO0-K-_QMrUeJU3uBJo4/view?usp=sharing)**
