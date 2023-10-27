@@ -123,11 +123,7 @@ Throughout the duration of this project, we will be contributing directly to ope
 - Quay.io plays a vital role in our container management strategy. We utilize Quay.io to securely host and distribute our container images, including the OPE repository base container image.
 - This platform enables version control, streamlined collaboration, efficient repository management, and improved accessibility for educators and students. Our Quay.io is in the process of being associated with the correct user and container, ensuring clarity and ease of use for all project collaborators.
 
-2. **Address Space Layout Randomization**
-- We intend to prioritize cybersecurity through the strategic use of Address Space Layout Randomization (ASLR).
-- We will assess ASLR's capability to mitigate memory-based vulnerabilities by introducing controlled vulnerabilities and evaluating their resistance to exploitation.
-- We will confirm the randomness of memory addresses, ensuring predictability is minimized.
-- By integrating ASLR testing, we bolster OPE's cybersecurity, mitigate exploits, and protect user data while fostering long-term security for the educational platform.
+2. ADD A 2
 
 3. **Environment Specific Tests**
 - We're enhancing our testing approach by crafting environment-specific testing scripts
