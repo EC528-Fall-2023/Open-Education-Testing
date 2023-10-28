@@ -118,17 +118,23 @@ These user personas represent a diverse set of users who can benefit from the fu
 
 Throughout the duration of this project, we will be contributing directly to open education tests. These tests directly involve the functionality of jupyter notebooks and other supported platforms. They do not involve server-side support, such as containerized support and remote access.
 
-1. **Quay.io**
-- In order to deal with maintaingin a reliable and accessible educational platform while maintaining a strong infrastructure for development and testing, we use Quay.io.
-- Quay.io plays a vital role in our container management strategy. We utilize Quay.io to securely host and distribute our container images, including the OPE repository base container image.
-- This platform enables version control, streamlined collaboration, efficient repository management, and improved accessibility for educators and students. Our Quay.io is in the process of being associated with the correct user and container, ensuring clarity and ease of use for all project collaborators.
 
-2. ADD A 2
+1. **Test Notebook Template**
+   - We are developing a standaridzed template for Jupyter notebooks involving a variety of tests 
+   - Tests include UID/GID checks, write permissions, accessible storage, and networking.
+   - This template will allow users to run quick diagnotistics to ensure system compatability 
+
+2. **OPE Tool**
+
+   - The OPE tool is central to the OPE project for providing an easy-to-work-with interface for writing and cloning Jupyter Notebook textbooks.
+   - The test notebook template will be integrated within the OPE Tool, which can be used for generating reports documenting compatability failures
+   - We will be adding a new command to OPE Tool to allow users to create test reports on demand
+
 
 3. **Environment Specific Tests**
-- We're enhancing our testing approach by crafting environment-specific testing scripts
-- Tailoring the solution makes our tests more robust, addressing critical aspects like ASLR, user ID generation, and unique user limits within the NERF environment.
-- These scripts ensure comprehensive validation, adaptability to evolving conditions, and resilience in our educational platform, reinforcing our commitment to meeting project-specific requirements effectively.
+   - We're enhancing our testing approach by crafting environment-specific testing scripts
+   - Tailoring the solution makes our tests more robust, addressing critical aspects like ASLR, user ID generation, and unique user limits within the NERF environment.
+   - These scripts ensure comprehensive validation, adaptability to evolving conditions, and resilience in our educational platform, reinforcing our commitment to meeting project-specific requirements effectively.
 
  
 
@@ -161,8 +167,9 @@ Release planning section describes how the project will deliver incremental sets
 3. **Revise OPE Tests with Exception Handling and Standardize Tests**
    - Enhance existing tests with robust exception handling to provide developers with clear indications of build issues or failures.
    - Merge tests into one single notebook, standardizing under a common framework to properly report errors
-4. **Add functionality for ope commands listed by appavoo in tools branch**
-   - Meet with Professor Appavoo (or send an email, but ideally meet) to ask for clarification where needed on the commands and verify our understanding is correct for each.
+4. **Add functionality for ope commands and revise GitHub Actions**
+   - Verify and test each GitHub action found in .github/workflows to ensure proper build compatability tests
+   - Create functionality for missing OPE commands in tools branch, including but not limited to: `ope new part`, `ope new section`, `repo_add`
 5. **Write code to translate LaTeX projects into OPE Jupyter NB framework**
    - At least start the framework for this. A professor who already wrote their textbook in LaTeX wants an easy migration to this platform to reap all the benefits of the OPE features and            hosting it online, but the barrier to entry is all the work of rewriting.
    - Write this code with pandoc and bash, maybe python too to parse sections of LaTeX and use *ope tools* developed in sprint 4 to make this process easier.
