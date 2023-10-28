@@ -45,13 +45,13 @@ Users of this platform may include but are not limited to:
 - Challenges: Balancing security and accessibility in an educational environment is her primary challenge.
 4. **Cybersecurity Researcher - Dr. Roberta:**
 - Background and Role: Dr. Roberta is a cybersecurity researcher who uses the Open Education platform to study security-related topics.
-- Needs and Goals: Roberta relies on Address Space Layout Randomization (ASLR) for her research. She needs a secure and customizable environment to conduct experiments, validate findings, and ensure data privacy.
+- Needs and Goals: Roberta needs a secure and customizable environment to conduct experiments, validate findings, and ensure data privacy.
 - Challenges: Keeping her research environment secure while exploring new security features is crucial for her work.
-5. **Data Science Enthusiast - Ricky:**
+1. **Data Science Enthusiast - Ricky:**
 - Background and Role: Ricky is passionate about data science and uses the Open Education platform to gain practical skills.
 - Needs and Goals: Ricky requires access to packages, GDB for debugging, and version control for data analysis. He values a seamless user experience.
 - Challenges: Ricky aims to balance data confidentiality and performance in his data analysis projects.
-6. **UI/UX Designer - Lily:**
+1. **UI/UX Designer - Lily:**
 - Background and Role: Lily is a UI/UX designer who uses the Open Education platform to assess and improve the user interface.
 - Needs and Goals: Lily relies on UI validation and Selenium-based tests to ensure a user-friendly experience in Jupyter notebooks.
 - Challenges: Maintaining consistency and visual appeal in educational materials while accommodating diverse user needs is her primary challenge.
@@ -133,9 +133,8 @@ Throughout the duration of this project, we will be contributing directly to ope
 
 3. **Environment Specific Tests**
    - We're enhancing our testing approach by crafting environment-specific testing scripts
-   - Tailoring the solution makes our tests more robust, addressing critical aspects like ASLR, user ID generation, and unique user limits within the NERF environment.
+   - Tailoring the solution makes our tests more robust, addressing critical aspects like user ID generation and unique user limits within the NERF environment.
    - These scripts ensure comprehensive validation, adaptability to evolving conditions, and resilience in our educational platform, reinforcing our commitment to meeting project-specific requirements effectively.
-
  
 
 ## 5. Acceptance criteria
