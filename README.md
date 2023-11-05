@@ -180,6 +180,7 @@ for working on ope CLI tool and image build process tests
 - [https://github.com/rkulskis/content-examples](https://github.com/rkulskis/content-examples) (fork of [https://github.com/OPEFFORT/content-examples](https://github.com/OPEFFORT/content-examples))
 repo to be pulled by default with the ope CLI tool for textbook creation,
 we added our jupyter .ipynb test notebook. Users can run it simply with `ope test`
+- [https://github.com/kevinge7/OPE-Testing/tree/tools](https://github.com/kevinge7/OPE-Testing/tree/tools) (fork of [https://github.com/OPEFFORT/OPE-Testing](https://github.com/OPEFFORT/OPE-Testing) for working on OPE command line Tools. 
 
 
 
