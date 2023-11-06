@@ -109,8 +109,7 @@ These user personas represent a diverse set of users who can benefit from the fu
 
 ## 4. Solution Concept
 **Architecture**
-
-![](images/A1.png)
+![OPE testing](https://github.com/EC528-Fall-2023/Open-Education-Testing/assets/91744036/cddb0b81-1cd1-4eed-b9cb-b086e53b49f9)
 
 ![](images/A2.png)
 
