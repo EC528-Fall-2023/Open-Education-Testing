@@ -168,6 +168,8 @@ Release planning section describes how the project will deliver incremental sets
 4. **Add functionality for ope commands and revise GitHub Actions**
    - Verify and test each GitHub action found in .github/workflows to ensure proper build compatability tests
    - Create functionality for missing OPE commands in tools branch, including but not limited to: `ope new part`, `ope new section`, `repo_add`
+   - Create autograding framework to incorporate OPE into gradescope to allow for exporting testing onto OPE container to circumvent any potential kernel incompatibilities between the gradescope kernel and the OPE course assignments.
+   - Fix github actions workflow for conainer build to work. Also, identify and fix any broken tests and make tests more robust.
 5. **Write code to translate LaTeX projects into OPE Jupyter NB framework**
    - At least start the framework for this. A professor who already wrote their textbook in LaTeX wants an easy migration to this platform to reap all the benefits of the OPE features and            hosting it online, but the barrier to entry is all the work of rewriting.
    - Write this code with pandoc and bash, maybe python too to parse sections of LaTeX and use *ope tools* developed in sprint 4 to make this process easier.
@@ -179,7 +181,8 @@ for working on ope CLI tool and image build process tests
 - [https://github.com/rkulskis/content-examples](https://github.com/rkulskis/content-examples) (fork of [https://github.com/OPEFFORT/content-examples](https://github.com/OPEFFORT/content-examples))
 repo to be pulled by default with the ope CLI tool for textbook creation,
 we added our jupyter .ipynb test notebook. Users can run it simply with `ope test`
-- [https://github.com/kevinge7/OPE-Testing/tree/tools](https://github.com/kevinge7/OPE-Testing/tree/tools) (fork of [https://github.com/OPEFFORT/OPE-Testing](https://github.com/OPEFFORT/OPE-Testing) for working on OPE command line Tools. 
+- [https://github.com/kevinge7/OPE-Testing/tree/tools](https://github.com/kevinge7/OPE-Testing/tree/tools) (fork of [https://github.com/OPEFFORT/OPE-Testing](https://github.com/OPEFFORT/OPE-Testing) for working on OPE command line Tools.
+- [https://github.com/rkulskis/gradescope-autograder](https://github.com/rkulskis/gradescope-autograder) framework for incorporating OPE with gradescope using `ssh` and `scp`. This API allows you to outsource the autograding of student code to your OPE container on your own cluster. This allows you to run your autograder tests on a cluster on which you know the kernel is compatible with the packages used in your OPE course. It then uploads the results back to gradescope for publishing.
 
 
 
