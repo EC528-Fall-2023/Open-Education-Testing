@@ -122,7 +122,7 @@ Throughout the duration of this project, we will be contributing directly to ope
 ## 5. Acceptance criteria
 
 Minimum acceptance criteria: 
-   - Develop a Test Notebook Template. The tests ensure that the base container only passes the build process if all of the packages are compatible and fully functioning, the address randomization works (need to clarify more on this), and all content functions as intended.
+   - Develop a Test Notebook Template. The tests ensure that the base container only passes the build process if all of the packages are compatible and fully functioning, the address randomization is off so that debugging tools like gdb work, and all content functions as intended.
    - Successfully deploy base container to NERC or some test cluster.
    - Implement all of the ope commands listed in the OPE-Testing *tools* branch as described by Professor Appavoo to allow for a more user-friendly framework for content creation. Also, add necessary documentation for these commands.
 
