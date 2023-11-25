@@ -1,7 +1,7 @@
 # Open Education Testing
 ## Project Description
 
-This project focuses on enriching educational technology through the integration of Jupyter notebooks and Linux terminal activities. Intended for students, educators, and infrastructure developers. Here is the github repo containing all of our groups work thus far: [enhanced OPE]([https://rkulskis.github.io/enhanced-ope/features_intro.html](https://github.com/rkulskis/enhanced-ope/tree/main)). This repo has the link to our OPE textbook containing all of our documentation.
+This project focuses on enriching educational technology through the integration of Jupyter notebooks and Linux terminal activities. Intended for students, educators, and infrastructure developers. Here is the github repo containing all of our groups work thus far: [enhanced OPE](https://github.com/rkulskis/enhanced-ope/tree/main). This repo has the link to our OPE textbook containing all of our documentation.
 
 **Team Members**: Yuxi Ge, Jonathan Mikalov, Riya Deokar, Ross Mikulskis, Yiqin Zhang
 
