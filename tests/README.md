@@ -7,7 +7,6 @@
 
 ## Customization
 
-- Details on how `all-tests.ipynb` can be adapted for specific users or scenarios.
 - To customize, create a new cell inside `All-Tests.ipynb`
   - If test fails, append the string `"Test Name" Failed` to ERRORS array with the name of the error, otherwise, pass the string to PASSES array
   - Example template:
