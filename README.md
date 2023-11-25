@@ -1,7 +1,7 @@
 # Open Education Testing
 ## Project Description
 
-This project focuses on enriching educational technology through the integration of Jupyter notebooks and Linux terminal activities. Intended for students, educators, and infrastructure developers.
+This project focuses on enriching educational technology through the integration of Jupyter notebooks and Linux terminal activities. Intended for students, educators, and infrastructure developers. Here is the website containing all of our groups work thus far: [enhanced OPE](https://rkulskis.github.io/enhanced-ope/features_intro.html).
 
 **Team Members**: Yuxi Ge, Jonathan Mikalov, Riya Deokar, Ross Mikulskis, Yiqin Zhang
 
@@ -160,12 +160,7 @@ Release planning section describes how the project will deliver incremental sets
 
 Here are a couple repos that are important to our project, forked from the OPE repos:
 - [https://github.com/rkulskis/ope-quay](https://github.com/rkulskis/ope-quay) (fork of [https://github.com/OPEFFORT/OPE-Testing](https://github.com/OPEFFORT/OPE-Testing)) 
-for working on ope CLI tool and image build process tests
-- [https://github.com/rkulskis/content-examples](https://github.com/rkulskis/content-examples) (fork of [https://github.com/OPEFFORT/content-examples](https://github.com/OPEFFORT/content-examples))
-repo to be pulled by default with the ope CLI tool for textbook creation,
-we added our jupyter .ipynb test notebook. Users can run it simply with `ope test`
-- [https://github.com/kevinge7/OPE-Testing/tree/tools](https://github.com/kevinge7/OPE-Testing/tree/tools) (fork of [https://github.com/OPEFFORT/OPE-Testing](https://github.com/OPEFFORT/OPE-Testing) for working on OPE command line Tools.
-- [https://github.com/rkulskis/gradescope-autograder](https://github.com/rkulskis/gradescope-autograder) framework for incorporating OPE with gradescope using `ssh` and `scp`. This API allows you to outsource the autograding of student code to your OPE container on your own cluster. This allows you to run your autograder tests on a cluster on which you know the kernel is compatible with the packages used in your OPE course. It then uploads the results back to gradescope for publishing.
+- [Our documentation formatted as an OPE book](https://rkulskis.github.io/enhanced-ope/features_intro.html) 
 
 
 
