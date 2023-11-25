@@ -170,6 +170,7 @@ Here are a couple repos that are important to our project, forked from the OPE r
 - **[Sprint 2 Recording](https://drive.google.com/file/d/1lJqYb4c8eatcnu1teSPzbsKXZmZMlphi/view?usp=sharing)**
 - **[Sprint 3 Recording](https://drive.google.com/file/d/1Iy90VqmvtLN4ZKXjmvYmGfP7ebv0lfrO/view?usp=drivesdk)**
 - **[Sprint 4 Recording](https://drive.google.com/file/d/10FLkKA6gf2eeo9uehe-S4B2JsGAIUzuN/view?usp=sharing)**
+- **[Sprint 5 Recording](https://drive.google.com/file/d/1DQGUJ51WrX0bTas6FinE0E0j-jUvZuvq/view?usp=sharing)**
 
 ## Slides
 - **[Sprint 2 Slides](https://docs.google.com/presentation/d/1fL5fSKnzFHu7jynSGlMBzb1nYSS9v-ooWViMfuFNXDw/edit?usp=sharing)**
