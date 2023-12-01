@@ -21,14 +21,13 @@ parts:
     - file: workflow_tests/Approval
     - file: workflow_tests/Publish
   - file: env_tests/Environment_Tests
+  - file: github_actions/gh
 
 - caption: 'OPE Command Line Tool'
   numbered: false
   chapters:  
   - file: OPE_Command_Line_Tool/install
   - file: OPE_Command_Line_Tool/instruction
-
-
   
 - caption: 'Features Documentation'
   numbered: false
@@ -41,7 +40,6 @@ parts:
   - file: gradescope_autograder/Gradescope_Autograder
     sections: 
     - file: gradescope_autograder/Extensions
-  - file: github_actions/gh
 
 - caption: 'Miscellaneous Documentation'
   numbered: false

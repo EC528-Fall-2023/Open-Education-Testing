@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Instruction &#8212; OPE Features</title>
+    <title>Creating an OPE Textbook &#8212; OPE Features</title>
   
   
   
@@ -63,11 +63,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'OPE_Command_Line_Tool/instruction';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'github_actions/chapter';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Jupytexmagic" href="../jupytexmagic/Jupytexmagic.html" />
-    <link rel="prev" title="Installation" href="install.html" />
+    <link rel="prev" title="Setting up Github Actions and Quay.io" href="gh.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -183,12 +183,16 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../env_tests/Environment_Tests.html">Environment_Tests</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../github_actions/gh.html">Setting up Github Actions and Quay.io</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">OPE Command Line Tool</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../OPE_Command_Line_Tool/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OPE_Command_Line_Tool/instruction.html">Instruction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Github Actions</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Instruction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gh.html">Setting up Github Actions and Quay.io</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Creating an OPE Textbook</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Features Documentation</span></p>
 <ul class="nav bd-sidenav">
@@ -251,6 +255,37 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyterhub-opf-jupyterhub.apps.smaug.na.operate-first.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/rkulskis/enhanced-ope&urlpath=lab/tree/enhanced-ope/content/github_actions/chapter.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -276,7 +311,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/rkulskis/enhanced-ope/edit/main/content/OPE_Command_Line_Tool/instruction.md" target="_blank"
+      <li><a href="https://github.com/rkulskis/enhanced-ope/edit/main/content/github_actions/chapter.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +328,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/rkulskis/enhanced-ope/issues/new?title=Issue%20on%20page%20%2FOPE_Command_Line_Tool/instruction.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/rkulskis/enhanced-ope/issues/new?title=Issue%20on%20page%20%2Fgithub_actions/chapter.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -323,7 +358,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/OPE_Command_Line_Tool/instruction.md" target="_blank"
+      <li><a href="../_sources/github_actions/chapter.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -333,7 +368,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -405,7 +440,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Instruction</h1>
+    <h1>Creating an OPE Textbook</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -415,12 +450,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general">General</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new-project"><code class="docutils literal notranslate"><span class="pre">new_project</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new-book"><code class="docutils literal notranslate"><span class="pre">new_book</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new-container"><code class="docutils literal notranslate"><span class="pre">new_container</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new-course"><code class="docutils literal notranslate"><span class="pre">new_course</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#update"><code class="docutils literal notranslate"><span class="pre">update</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a></li>
 </ul>
             </nav>
         </div>
@@ -432,72 +462,107 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="instruction">
-<h1>Instruction<a class="headerlink" href="#instruction" title="Permalink to this heading">#</a></h1>
-<section id="general">
-<h2>General<a class="headerlink" href="#general" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Usage</strong>: Run the tool with a specific command and relevant arguments.</p></li>
-<li><p><strong>Command</strong>: <code class="docutils literal notranslate"><span class="pre">ope</span> <span class="pre">&lt;function&gt;</span> <span class="pre">[arguments]</span></code></p></li>
-</ul>
-</section>
-<section id="new-project">
-<h2><code class="docutils literal notranslate"><span class="pre">new_project</span></code><a class="headerlink" href="#new-project" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Description</strong>: Creates a new OPE project from templates.</p></li>
-<li><p><strong>Usage</strong>: <code class="docutils literal notranslate"><span class="pre">ope</span> <span class="pre">new_project</span> <span class="pre">&lt;project_name&gt;</span> <span class="pre">[repo_url]</span></code></p></li>
-<li><p><strong>Arguments</strong>:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">project_name</span></code>: Name of the new project.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">repo_url</span></code> (optional): URL of the Git repository to associate with the project.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="new-book">
-<h2><code class="docutils literal notranslate"><span class="pre">new_book</span></code><a class="headerlink" href="#new-book" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Description</strong>: Creates a new book within the project.</p></li>
-<li><p><strong>Usage</strong>: <code class="docutils literal notranslate"><span class="pre">ope</span> <span class="pre">new_book</span> <span class="pre">&lt;book_name&gt;</span></code></p></li>
-<li><p><strong>Arguments</strong>:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">book_name</span></code>: Name of the new book.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="new-container">
-<h2><code class="docutils literal notranslate"><span class="pre">new_container</span></code><a class="headerlink" href="#new-container" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Description</strong>: Adds source for building a new container for the project.</p></li>
-<li><p><strong>Usage</strong>: <code class="docutils literal notranslate"><span class="pre">ope</span> <span class="pre">new_container</span> <span class="pre">&lt;container_name&gt;</span></code></p></li>
-<li><p><strong>Arguments</strong>:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code>: Name of the new container.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="new-course">
-<h2><code class="docutils literal notranslate"><span class="pre">new_course</span></code><a class="headerlink" href="#new-course" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Description</strong>: Creates a new course with a standard set of books and a container.</p></li>
-<li><p><strong>Usage</strong>: <code class="docutils literal notranslate"><span class="pre">ope</span> <span class="pre">new_course</span> <span class="pre">&lt;course_name&gt;</span> <span class="pre">[repo_url]</span></code></p></li>
-<li><p><strong>Arguments</strong>:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">course_name</span></code>: Name of the new course.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">repo_url</span></code> (optional): URL of the Git repository for the course.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="update">
-<h2><code class="docutils literal notranslate"><span class="pre">update</span></code><a class="headerlink" href="#update" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Description</strong>: Updates and rebases changes from the OPE framework.</p></li>
-<li><p><strong>Usage</strong>: <code class="docutils literal notranslate"><span class="pre">ope</span> <span class="pre">update</span></code></p></li>
-<li><p>No arguments required.</p></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="creating-an-ope-textbook">
+<h1>Creating an OPE Textbook<a class="headerlink" href="#creating-an-ope-textbook" title="Permalink to this heading">#</a></h1>
+<p>Creating an OPE textbook Documentation</p>
+<section id="steps">
+<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Create an empty repsitory</p></li>
+<li><p>Download <a class="reference external" href="https://github.com/OPEFFORT/tools">OPEEFFORT tools repository</a></p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>tools-main
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Generate an SSH key, using the email associated with your github account</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-b<span class="w"> </span><span class="m">4096</span><span class="w"> </span>-C<span class="w"> </span><span class="s1">&#39;your_email@bu.edu&#39;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Use this command to look at the content of your key, then copy and add the SSH key to your associated github account: Settings &gt; SSH and GPG keys</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>~/.ssh/config/id_rsa.pub
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Make sure you are able to use github commands on your linux machine, if not run the commands below</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>git
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Within the tools directory, clone the empty repository you created with the command below: fill in the username and repository name</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:your_github_username/your_github_empty_repo.git
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Install the OPE Command Line Tool by running the <a class="reference external" href="http://install.sh">install.sh</a> file in the tools directory as shown below</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./install.sh
+</pre></div>
+</div>
+<p>Paste the outputted export path line in your command-line</p>
+<p>Verify installation by running the ope command</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ope
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>Run this command (including your own project repo name and repo url) to create a new project using the empty repository URL as shown below
+You can find your repo’s SSH URL when you the green &lt;&gt; Code button on your github repo
+This will create subdirectories of books, containers, and content in your github repo</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ope<span class="w"> </span>new_project<span class="w"> </span>your_project_name<span class="w"> </span>your_repo_url
+</pre></div>
+</div>
+<ol class="arabic simple" start="9">
+<li><p>Create a new book in your repository, replacing your_book_name</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ope<span class="w"> </span>new_book<span class="w"> </span>your_book_name
+</pre></div>
+</div>
+<ol class="arabic simple" start="10">
+<li><p>Move to your book’s content directory, edit the configure file to change book settings (title, author, logo, URL to publish to, and jupyter extensions enabling)</p></li>
+</ol>
+<p>If you want to change your textbook’s logo on the top left corner of your book: change the logo .png name and place a new .png in the content directory</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nano<span class="w"> </span>your_book_name
+</pre></div>
+</div>
+<p>If your are looking for which line and column an error is on, you can use the command below to be able to see the line and column numbers</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nano<span class="w"> </span>-c<span class="w"> </span>your_book_name
+</pre></div>
+</div>
+<ol class="arabic simple" start="11">
+<li><p>In order to see all the changes you are making in these files you must publish the book using the command below, there is a few reasons this command may not run yet</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>pub
+</pre></div>
+</div>
+<p>To do this, make sure you are in your_book_name directory, you should be able to see your Makefile in this directory (you can verify the pub target exists at the top of the Makefile, when you open it)</p>
+<p>If you are receiving an error message regarding ghp-import, install the ghp-import command which is used to publish content to GitHub Pages</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>ghp-import
+</pre></div>
+</div>
+<p>To avoid more errors and make ghp-import globally accessible – make sure to add ‘ghp-import’s binary path to your system’s path by modifying your shell (.bashrc or .zshrc) as shown below</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;/usr/local/bin:$PATH&#39;</span>
+</pre></div>
+</div>
+<p>Reload your terminal to apply changes</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</pre></div>
+</div>
+<p>Verify command installation by running the command below</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ghp-import<span class="w"> </span>--version
+If<span class="w"> </span>the<span class="w"> </span>make<span class="w"> </span>pub<span class="w"> </span><span class="nb">command</span><span class="w"> </span>is<span class="w"> </span>still<span class="w"> </span>not<span class="w"> </span>running,<span class="w"> </span>run<span class="w"> </span>the<span class="w"> </span><span class="nb">command</span><span class="w"> </span>below<span class="w"> </span>to<span class="w"> </span>
+
+<span class="sb">```</span>shell
+
+<span class="nb">source</span><span class="w"> </span>~/.bashrc
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -514,7 +579,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./OPE_Command_Line_Tool"
+            path: "./github_actions"
         },
         predefinedOutput: true
     }
@@ -532,12 +597,12 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="install.html"
+       href="gh.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Installation</p>
+        <p class="prev-next-title">Setting up Github Actions and Quay.io</p>
       </div>
     </a>
     <a class="right-next"
@@ -564,12 +629,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general">General</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new-project"><code class="docutils literal notranslate"><span class="pre">new_project</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new-book"><code class="docutils literal notranslate"><span class="pre">new_book</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new-container"><code class="docutils literal notranslate"><span class="pre">new_container</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new-course"><code class="docutils literal notranslate"><span class="pre">new_course</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#update"><code class="docutils literal notranslate"><span class="pre">update</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a></li>
 </ul>
   </nav></div>
 
