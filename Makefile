@@ -6,9 +6,8 @@
 SHELL := /bin/bash
 # install yq for parsing config.yml and get customized tag for OPE container in same step
 # from base/config.yml
-CUST := $(shell sudo add-apt-repository ppa:rmescandon/yq && \
-	sudo apt update && \
-	sudo apt install yq -y && \
+CUST := $(shell sudo wget https://github.com/mikefarah/yq/releases/download/v4.2.0/yq_linux_amd64 -O /usr/bin/yq && \
+    	sudo chmod +x /usr/bin/yq && \
 	yq eval ".ope.tag" base/config.yml)
 
 # I think bash is failing to intialze at line 1
