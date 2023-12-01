@@ -384,7 +384,7 @@ jobs:
        - name: Push to Public Version
          run: |
            sudo wget https://github.com/mikefarah/yq/releases/download/v4.2.0/yq_linux_amd64 -O /usr/bin/yq
-    	   sudo chmod +x /usr/bin/yq
+           sudo chmod +x /usr/bin/yq
            REGISTRY=$(yq eval ".ope.book_registry" base/config.yml)
            REGISTRY_USER=$(yq eval ".ope.registry_user" base/config.yml)
            TIME=$(cat time.txt)
