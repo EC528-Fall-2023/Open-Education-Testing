@@ -476,6 +476,7 @@ document.write(`
 </div>
 <section id="write-permission-to-home-directory-test">
 <h2>Write Permission to Home Directory Test<a class="headerlink" href="#write-permission-to-home-directory-test" title="Permalink to this heading">#</a></h2>
+<p>This test checks whether the user running the Jupyter Notebook has write permissions to their home directory. It does so by attempting to create a temporary file in the user’s home directory and then deleting it. If the test succeeds, it confirms that the user has write permissions to their home directory.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
@@ -507,7 +508,7 @@ document.write(`
 </section>
 <section id="environmental-variables-test">
 <h2>Environmental Variables test<a class="headerlink" href="#environmental-variables-test" title="Permalink to this heading">#</a></h2>
-<p>This test confirms that the environment variables set from Dockerfile still exist and maintain the same values within the Jupyter Notebook. It also ensures that the user has a valid UID and GID within a customizable range</p>
+<p>The Environmental Variables test verifies that the environment variables set during the Dockerfile setup are correctly maintained within the Jupyter Notebook. Additionally, it checks if the user has a valid User ID (UID) and Group ID (GID) within a customizable range. This test ensures that the required environment variables are correctly set up and that the user’s UID and GID are within acceptable bounds.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -603,6 +604,7 @@ document.write(`
 </section>
 <section id="pip-conda-test">
 <h2>Pip-Conda Test<a class="headerlink" href="#pip-conda-test" title="Permalink to this heading">#</a></h2>
+<p>The Pip-Conda Test verifies the ability to install Python packages using the pip package manager within the user’s home directory. In this specific case, it attempts to install the pytest package using pip. If the installation succeeds, the test passes, indicating that the user can install Python packages.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TEST</span> <span class="o">=</span> <span class="s2">&quot;PIP PACKAGE INSTALLATION&quot;</span>
@@ -620,6 +622,7 @@ document.write(`
 </section>
 <section id="git-and-ssh-test">
 <h2>Git and SSH Test<a class="headerlink" href="#git-and-ssh-test" title="Permalink to this heading">#</a></h2>
+<p>The Git and SSH Test checks whether the Git and SSH configurations are correctly set up within the Jupyter Notebook environment. It verifies the paths to the .gitconfig and ssh_config files and reports whether they exist and can be read. This test helps ensure that Git and SSH are properly configured for the user.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">e</span><span class="p">,</span> <span class="n">output</span> <span class="o">=</span> <span class="n">shelltest</span><span class="p">(</span><span class="s2">&quot;readlink -f ~/.gitconfig&quot;</span><span class="p">)</span>
@@ -647,6 +650,7 @@ document.write(`
 </section>
 <section id="conda-directory-test">
 <h2>Conda Directory Test<a class="headerlink" href="#conda-directory-test" title="Permalink to this heading">#</a></h2>
+<p>The Conda Directory Test evaluates the read and write permissions of Conda directories. It checks if the Conda base directory and Conda environment directory are both readable and writable. If these directories have the necessary permissions, the test passes, indicating that Conda can be used effectively within the environment.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">check_permissions</span><span class="p">(</span><span class="n">dir_path</span><span class="p">):</span>
@@ -733,7 +737,7 @@ PASSED TESTS:
 </div>
 </div>
 </div>
-<p>Test Authors: Ross Mikulskis, Jonathan Mikalov, Yuxie Ge, Yiqin Zhang</p>
+<p>Test Authors: Ross Mikulskis, Jonathan Mikalov, Yuxie Ge, Yiqin Zhang, Riya Deokar</p>
 </section>
 </section>
 
