@@ -1,0 +1,48 @@
+format: jb-book
+root: features_intro
+parts: 
+- caption: 'OPE Overview'
+  numbered: false
+  chapters:
+  - file: ope/Overview
+
+- caption: 'Testing Documentation'
+  numbered: false
+  chapters:
+  - file: workflow_tests/Container_Tests
+    sections: 
+    - file: workflow_tests/Health
+    - file: workflow_tests/Image_version
+    - file: workflow_tests/Jupyter_nb
+    - file: workflow_tests/Package_version
+    - file: workflow_tests/Checksum
+    - file: workflow_tests/Size_and_time
+    - file: workflow_tests/UI
+    - file: workflow_tests/Approval
+    - file: workflow_tests/Publish
+  - file: env_tests/Environment_Tests
+
+- caption: 'OPE Command Line Tool'
+  numbered: false
+  chapters:  
+  - file: OPE_Command_Line_Tool/install
+  - file: OPE_Command_Line_Tool/instruction
+
+
+  
+- caption: 'Features Documentation'
+  numbered: false
+  chapters:
+  - file: jupytexmagic/Jupytexmagic
+    sections: 
+    - file: jupytexmagic/Getting_Started
+    - file: jupytexmagic/bro
+    - file: jupytexmagic/Extensions
+  - file: gradescope_autograder/Gradescope_Autograder
+    sections: 
+    - file: gradescope_autograder/Extensions
+
+- caption: 'Miscellaneous Documentation'
+  numbered: false
+  chapters:
+  - file: misc/Miscellaneous
