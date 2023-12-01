@@ -41,6 +41,7 @@ parts:
   - file: gradescope_autograder/Gradescope_Autograder
     sections: 
     - file: gradescope_autograder/Extensions
+  - file: github_actions/gh
 
 - caption: 'Miscellaneous Documentation'
   numbered: false
