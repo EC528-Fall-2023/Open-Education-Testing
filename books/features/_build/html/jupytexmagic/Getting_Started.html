@@ -1,0 +1,1451 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Getting_Started &#8212; OPE Features</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'jupytexmagic/Getting_Started';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Extensions" href="Extensions.html" />
+    <link rel="prev" title="Jupytexmagic" href="Jupytexmagic.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../features_intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/tesseract_lego.svg" class="logo__image only-light" alt="OPE Features - Home"/>
+    <script>document.write(`<img src="../_static/tesseract_lego.svg" class="logo__image only-dark" alt="OPE Features - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../features_intro.html">
+                    Enhanced OPE
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Testing Documentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workflow_tests/Container_Tests.html">Container_Tests</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_tests/Health.html">Health</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_tests/Image_version.html">Image_version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_tests/Jupyter_nb.html">Jupyter_Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_tests/Package_version.html">Package_version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_tests/Checksum.html">Checksum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_tests/Size_and_time.html">Size_and_time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_tests/UI.html">UI (Testing RISE and Jupyter Lab)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_tests/Approval.html">Approval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_tests/Publish.html">Publish</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../env_tests/Environment_Tests.html">Environment_Tests</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OPE Command Line Tool</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../OPE_Command_Line_Tool/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OPE_Command_Line_Tool/instruction.html">Instruction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Features Documentation</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Jupytexmagic.html">Jupytexmagic</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Getting_Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Extensions.html">Extensions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../gradescope_autograder/Gradescope_Autograder.html">Gradescope_Autograder</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gradescope_autograder/Extensions.html">Extensions</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous Documentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../misc/Miscellaneous.html">Miscellaneous</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyterhub-opf-jupyterhub.apps.smaug.na.operate-first.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/rkulskis/enhanced-ope&urlpath=lab/tree/enhanced-ope/content/jupytexmagic/Getting_Started.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/rkulskis/enhanced-ope" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/rkulskis/enhanced-ope/edit/main/content/jupytexmagic/Getting_Started.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/rkulskis/enhanced-ope/issues/new?title=Issue%20on%20page%20%2Fjupytexmagic/Getting_Started.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/jupytexmagic/Getting_Started.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Getting_Started</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-runs">Example Runs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging">Debugging</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-the-error">Fixing the error</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="getting-started">
+<h1>Getting_Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">jupytexmagic</span></code></p></li>
+<li><p>create a new cell with <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">jupytexmagic</span></code> and <code class="docutils literal notranslate"><span class="pre">%load_ext</span> <span class="pre">jupytexmagic</span></code></p></li>
+<li><p>have fun! for tex cells, place <code class="docutils literal notranslate"><span class="pre">%%tex</span></code> at the top of your cell</p></li>
+</ol>
+<p>If your tex compilation fails, you can use the <code class="docutils literal notranslate"><span class="pre">%%texdebug</span></code> magic command
+to display the output of <code class="docutils literal notranslate"><span class="pre">pdflatex</span></code> when compiling for debugging purposes.</p>
+<section id="example-runs">
+<h2>Example Runs<a class="headerlink" href="#example-runs" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">jupytexmagic</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Defaulting to user installation because normal site-packages is not writeable
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupytexmagic in /home/parallels/.local/lib/python3.10/site-packages (0.1.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">jupytexmagic</span>
+<span class="o">%</span><span class="k">load_ext</span> jupytexmagic
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">jupytexmagic</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;load_ext&#39;</span><span class="p">,</span> <span class="s1">&#39;jupytexmagic&#39;</span><span class="p">)</span>
+
+<span class="n">File</span> <span class="o">~/.</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.10</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jupytexmagic</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">10</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># Rest of your __init__.py code...</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">__version__</span> <span class="o">=</span> <span class="s1">&#39;0.1.1&#39;</span>
+<span class="ne">---&gt; </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">.jupytexmagic</span> <span class="kn">import</span> <span class="n">load_ipython_extension</span>
+
+<span class="n">File</span> <span class="o">~/.</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.10</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jupytexmagic</span><span class="o">/</span><span class="n">jupytexmagic</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">IPython.core.magic</span> <span class="kn">import</span> <span class="p">(</span><span class="n">Magics</span><span class="p">,</span> <span class="n">magics_class</span><span class="p">,</span> <span class="n">line_magic</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>                                 <span class="n">cell_magic</span><span class="p">,</span> <span class="n">line_cell_magic</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">SVG</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">PyPDF2</span> <span class="kn">import</span> <span class="n">PdfReader</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">import</span> <span class="nn">tempfile</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;PyPDF2&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">tex</span>
+\title{9: Neural Networks and Artificial Intelligence}
+\date{}
+\author{}
+% Packages
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{siunitx}[=v2]
+\usepackage{physics}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{pgfplots}
+\usepackage{geometry}
+\geometry{
+  paperwidth=7in,
+  paperheight=100in,
+  margin=1in
+}
+\pgfplotsset{compat=1.18}
+\usepackage[inkscapelatex=false]{svg}
+
+% Commands
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newcommand{\df}[3]{\textcolor{NavyBlue}{\textbf{#1}}}
+
+% Figure formatting
+\DeclareCaptionFormat{custom}
+{%
+    \textbf{#1#2}\textit{\small #3}
+}
+\captionsetup{format=custom}
+
+% use commmas instead of periods in SI units
+\sisetup{output-decimal-marker = {,}}
+% \input{glossary}
+\begin{document}
+\maketitle
+% \input{tablecontents}
+
+\section{Neural Networks}
+\subsection{What are Thoughts?}
+ Let&#39;s take a closer look at how the brain works to understand the design philosophy behind neural networks.
+
+As a fun example, let&#39;s try visualizing a flamingo. Pause for a moment before reading on and think about what a flamingo looks like. Here&#39;s what comes to my mind. A flamingo is pink, has a black tip on its beak, travels in large packs with other flamingos, and has tall nimble legs. 
+
+In order to generate that one thought we first looked at the ink on the page, decoded it into words and processed the meaning of each word while simultaneously processing the meaning of the sentence. Then we reached into our memory bank to recall everything related to flamingos. In other words, we took in visual data which activated different regions of our brain to abstract meaning from the data, and that meaning activated our memory recall to help us visualize flamingos. 
+
+Each region of your brain has billions of neurons which activate to different levels when you think and cause other neurons to activate.\footnote{The human brain has 86 billion total neurons. Some are very short (less than a milimeter in length) while others are over a meter!} Let&#39;s say that each neuron&#39;s state lies in the continuous range from completely dormant, 0, to fully activated, 1. Stated formally, we say that neuron $i$ has an activation
+
+\begin{equation}\label{eq:a_i}
+    a_i\in\mathbb{R}:a_i\in[0,1]
+\end{equation}
+Furthermore, each neuron is connected to other neurons, let&#39;s call them neighbors, and the activation of one neuron affects the state of its neighbors.\footnote{cf. Markov Chains}
+
+If I ask you the same question again, you&#39;ll likely generate similar thoughts; however, these thoughts might differ from the first time I asked you. Therefore, something changed in your brain. The connectivity of certain neighboring neurons was either reduced or strengthened. We can say that each neural connection from neuron $A$ to $B$ has an associated connectivity scalar $w_{AB}$ which changes the strength of the connection. If neuron $i$ has $n$ neighbors, borrowing the notation from equation \eqref{eq:a_i}, we can model its activation with
+
+\begin{equation}\label{eq:weight activation}
+    a_i\in\mathbb{R}:a_i\in[0,1]\land a_i=w_1a_1+w_2a_2+\ldots+w_na_n
+\end{equation}
+Therefore, neuron $i$&#39;s activation $a_i$ is a \df{linear combination}{}{DC} of its neighboring activations multiplied by their strength in connection to $a_i$. Right?—not quite.
+
+We will see in the next section why this definition is incomplete, as well as how to fix it.
+
+\subsection{Linear Separability}
+
+In the previous section we came to the conclusion that a neuron&#39;s activation is equal to a linear combination of its neighbors activations and connection strengths (see equation \eqref{eq:weight activation}). So how does this definition constrict the processing capabilities of our brain, considering that the brain is a network of neurons? Well the answer is \df{linear separability}{}{Two sets of data are linearly separable if there exists a linear decision boundary which properly separates these two sets of data. This linear boundary is a hyperplane. Two sets of data are linearly separable if and only if their convex hulls do not overlap.}.
+
+Because we have defined every activation in our set of neurons to be a linear combination, we can only create thoughts which model linear relationships. In other words, our ability to separate two groups of data is limited to generating hyperplanes as our \df{decision boundaries}{decision boundary}{A hypersurface that separates $n$-dimensional data into two classes such that all the points on one side belong to the first class, and all the points on the other side belong to the second class.}. 
+
+Recall that a \df{hyperplane}{}{A linear subspace with one less dimension than the space it occupies. All hyperplanes can be represented a linear combination.} is a linear subspace with one less dimension than the space it occupies. For example a hyper plane in $\mathbb{R}^2$ is a one-dimensional line in $\mathbb{R}$. If we look at our expression for $a_i$ from equation \eqref{eq:weight activation}, we can see that our linear combination of activations and weights is equivalent to the dot product of the weights and activations represented as vectors:
+
+\begin{equation}\label{eq:linear combo hyperplane}
+    a_i  =  w_1a_1+w_2a_2+\ldots+w_na_n 
+     = 
+    \begin{bmatrix}
+        w_1 \\
+        w_2 \\
+        \vdots \\
+        w_n
+    \end{bmatrix}
+    \cdot
+    \begin{bmatrix}
+        a_1 \\
+        a_2 \\
+        \vdots \\
+        a_2
+    \end{bmatrix}=
+    \mathbf{w_N}\cdot\mathbf{a_N}
+\end{equation}
+
+If we take the \df{gradient}{}{DC} of our activation vector with respect to our weights $\mathbf{w}$—with respect to weights rather than activations because the weights or neural connection strengths are what we update, not activations—we get the dot product between a vector of $1$s and our activations, causing our expression to evaluate to the sum of neihgboring activations, which is just a constant:
+
+\begin{equation}\label{eq:c=}
+\begin{aligned}
+    \nabla_\mathbf{w} a_i&amp;=
+    \nabla_\mathbf{w}(\mathbf{w_N}
+    \cdot
+    \mathbf{a_N})
+    =(\nabla_\mathbf{w}\mathbf{w_N})\cdot\mathbf{a_N}+\mathbf{w_N}\cdot(\nabla_\mathbf{w}\mathbf{a_N})\\
+    &amp;=
+    \begin{bmatrix}
+        \pdv{w_1}{w_1}\\[0.5em]
+        \pdv{w_2}{w_2}\\[0.5em]
+        \vdots\\[0.5em]
+        \pdv{w_n}{w_n}
+    \end{bmatrix}
+    \cdot
+    \begin{bmatrix}
+        a_1\\[0.5em]
+        a_2\\[0.5em]
+        \vdots\\[0.5em]
+        a_n
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+        w_1 \\[0.5em]
+        w_2\\[0.5em]
+        \vdots\\[0.5em]
+        w_n
+    \end{bmatrix}
+    \cdot
+    \mathbf{0}
+    =
+    \begin{bmatrix}
+        1 \\
+        1 \\
+        \vdots \\
+        1
+    \end{bmatrix}
+    \cdot
+    \begin{bmatrix}
+        a_1 \\
+        a_2 \\
+        \vdots \\
+        a_n
+    \end{bmatrix}
+     \\
+    &amp;=a_1+a_2+\ldots+a_n=c:c\in\mathbb{R}
+\end{aligned}
+\end{equation}
+
+Therefore, our variable $a_i$ is bound to evaluate to a constant, thereby having one less degree of freedom than the dimension it occupies. Furthermore, because we know that the gradient evaluates to a constant, $a_i$ is linear (i.e. its rate of change is constant). So we can say that $a_i$ is a hyperplane.
+
+Figure \ref{fig:linear sep} shows the difference between linearly separable and non-linearly separable data. We can see that the decision boundary on the right in figure \ref{fig:linear sep} is clearly non-linear, and therefore not a hyperplane. So we cannot model non-linear systems with our current model of what a neuron is since our model only allows us to create hyperplanes.
+
+\begin{figure}[H]
+\centering
+\centerline{\includesvg[width=0.75\columnwidth]{images/9-linear_separability.svg}}
+\caption{\label{fig:linear sep} Two datasets in $\mathbb{R}^2$ and their decision boundaries colored cyan blue. The dataset on the left is linearly separable by a hyperplane decision boundary. The dataset on the right is not linearly separable because it has a non-linear decision boundary.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\centerline{\includesvg[width=0.75\columnwidth]{images/9-convex_hull.svg}}
+\caption{\label{fig:convex hull} The resulting convex hull from a set of data points. Edges are drawn such that every angle is less than 180 degrees, so area is maximized (i.e. there are no concave features).}
+\end{figure}
+
+But how do we determine linear separability without drawing decision boundaries? Well, the answer is by drawing convex hulls. A \df{convex hull}{}{The smallest convex shape that can enclose a set of data points.} is simply the smallest convex shape that can enclose all of our data points. Figure \ref{fig:convex hull} shows how to draw a convex hull from a set of data points in $\mathbb{R}^2$. 
+
+A dataset is linearly separable if there are two classes (we cannot separate a space into more than two subspaces using a single hyperplane) and the convex hulls of those two classes of points do not overlap. Figure \ref{fig:convex overlap} shows how the convex hulls of non-linear data overlap with each other.
+
+\begin{figure}[H]
+\centering
+\centerline{\includesvg[width=0.5\columnwidth]{images/9-convex_overlap.svg}}
+\caption{\label{fig:convex overlap} Convex hulls of the two data classes from the right graph in figure \ref{fig:linear sep}. The data is not linearly separable because the convex hulls of the two classes overlap.}
+\end{figure}
+
+We now know that this model of the neuron is missing a component. Why? Because if you look at the non-linear data, your brain can visually generate the curved decision boundary separating the two classes—something that our model cannot do. Therefore, we need a non-linear component in our model of the neuron. 
+
+Rather than our activation $a_i$ being determined by a linear combination of its $n$ neighboring activations and weights, $a_i$ is the output of a \df{non-linear activation function}{}{Notated as $g$, the non-linear activation function is the second part of the perceptron. It takes a preactivation $z$ as input, and outputs an activation $a$. $g$ is non-linear because its derivative $g&#39;$ is either not constant or $g&#39;$ has multiple values.} $g$ which takes in this linear combination as $z_i$ and outputs a real number (see equation \eqref{eq:preactivation and g}).
+
+\begin{equation}\label{eq:preactivation and g}
+\begin{aligned}
+    z_i &amp;=a_1w_1+a_2w_2+\ldots+a_nw_n=
+    \begin{bmatrix}
+        a_1 \\
+        a_2 \\
+        \vdots \\
+        a_n
+    \end{bmatrix}
+    \cdot
+    \begin{bmatrix}
+        w_1 \\
+        w_2 \\
+        \vdots \\
+        w_n
+    \end{bmatrix}=\mathbf{a_N\cdot w_N}\\
+    a_i &amp;=g(z_i)=g(\mathbf{a_N\cdot w_N}) \textit{ where $N=neighbors$.}
+\end{aligned}
+\end{equation}
+
+Let&#39;s recall the \df{Taylor series}{}{DC}, which allows us to model any infinitely differentiable function $f(x)$ stationed at $a$ using the \df{power series}{}{DC} formula
+
+\begin{equation}\label{Taylor Series}
+    T(x)=f(a)+\frac{f^{(1)}(a)}{1!}(x-a)+\frac{f^{(2)}(a)}{2!}(x-a)^2+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^n
+\end{equation}
+where $f^{(n)}(a)$ is the $n$th derivative of $f$ at $a$. Figure \ref{fig:taylor series graph} shows an example of Taylor expansion of $f(x)=\sin x$ at $a=0$. 
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}%
+[
+    grid=major,     
+    xmin=-6,
+    xmax=6,
+    axis x line=middle,
+    ymin=-6,
+    ymax=6,
+    axis y line=middle,
+    samples=100,
+    domain=-6:6,
+    legend style={at={(0.3,0.98)}} 
+]
+    \addplot+[mark=none,Cerulean,ultra thick] {sin(deg(x))};
+    \addplot+[mark=none,YellowOrange,very thick] {x};
+    \addplot+[mark=none,brown,very thick] {x-(x^3)/6};
+    \addplot+[mark=none,SkyBlue,very thick] {x-(x^3)/6+(x^5)/120};
+    %\addplot+[mark=none,magenta,very thick] {x-(x^3)/6+(x^5)/120-(x^7)/5040};
+    \legend{$\sin(x)$,$T_1(x)$,$T_3(x)$,$T_5(x)$}
+\end{axis}
+\end{tikzpicture}
+\caption{\label{fig:taylor series graph} Taylor expansion of \textcolor{Cerulean}{$\sin x$ in cyan} by polynomials of degree \textcolor{YellowOrange}{1 in orange}, \textcolor{brown}{3 in brown}, and \textcolor{SkyBlue}{5 in teal}. Notice how as we stray further from $x=a=0$, the approximation becomes less accurate.}
+\end{figure} 
+As $n$ approaches infinity, the inaccuracies in our Taylor approximation $T(x)$ iron out and the series approaches $f(x)$ across the whole range of our domain $x\in(-\infty,\infty)$.
+
+Your brain&#39;s network of neurons works in a similar way. Each neuron has a non-linear component $g$, and as an activation stimulus \df{propagates}{propagate}{a fancy word for spreads. (e.g. activations propagate throughout a neural network)} (a fancy word for spreads) throughout the network it gets mushed and stretched by each neuron&#39;s non-linear component to approximate some mapping of stimuli inputs to desired outputs. 
+
+The resulting data at the end is one that is linearly separable because we have created a non-linear decision boundary. For example in binary classification if we have generated the non-linear decision boundary $d(x)$, our last layer of the network outputs a \df{linear classifier}{}{DC} $l(x)$ which determines whether a point is below our decision boundary or above (see equation \eqref{eq:linear classifier}{}). %DC
+
+\begin{equation}\label{eq:linear classifier}
+l(x)=
+\begin{cases}
+    1 &amp; \text{if $x\ge d(x)$} \\
+    0 &amp; \text{if $x&lt;d(x)$}
+\end{cases}
+\end{equation}
+\subsection{Perceptrons: A Digital Analog to the Neuron}
+The \df{perceptron}{}{the fundamental building block of a neural network. Made to be a digital analog to the neuron, a perceptron in row $r$ and layer $l$ of our network takes in the activation vector from the previous layer $\mathbf{A^{l-1}}\in\mathbb{R}^m$ and outputs an activation as follows: $a_r^l=g(\mathbf{w_r^l}\cdot\mathbf{A^l-1}+b_r^l)$ where $g$ is our non-linear activation function, $\mathbf{w_r^l}\in\mathbb{R}^m$ is the perceptron&#39;s associated weight vector, and $b\in\mathbb{R}$ is the bias associated with that network.} is the fundamental building block of a neural network and it is similar to the brain&#39;s neuron.
+
+The perceptron consists of two parts, one linear and one non-linear. We call the first part linear because we perform a linear function. A perceptron in layer $l$ and row $r$ has an associated \df{weight vector}{}{DC} $\mathbf{w_r^l}$. We take the \df{dot product}{}{DC} of our input \df{activation vector}{}{DC} from the previous layer $\mathbf{A^{l-1}}$, where each element maps to a perceptron in the previous layer, and the perceptron&#39;s weight vector $\mathbf{w_r^l}$:
+
+\begin{equation}\label{eq:linear half}
+    \mathbf{A^{l-1}}\cdot \mathbf{w_r^l}=
+    \begin{bmatrix}
+        a_1^{l-1} \\[0.5em]
+        a_2^{l-1} \\[0.5em]
+        \vdots \\[0.5em]
+        a_m^{l-1}
+    \end{bmatrix}
+    \cdot
+    \begin{bmatrix}
+        w_{r1}^{l} \\[0.5em]
+        w_{r2}^{l} \\[0.5em]
+        \vdots \\[0.5em]
+        w_{rm}^{l}
+    \end{bmatrix}
+    = a_1^{l-1}w_{r1}^l+a_2^{l-1}w_{r2}^l+\ldots+a_m^{l-1}w_{rm}^l
+    = z_r^l
+\end{equation}
+
+The second part is non-linear because we perform a non-linear \df{activation function}{}{DC}, denoted $g(z)$. As we discussed in section 1.1, many relationships or mappings cannot be represented by a linear model alone. Therefore, we need to have the non-linear component in our perceptron to capture these non-linear relationships.
+
+The function $g$ takes $z_r^l$ from equation (\ref{eq:linear half}) as input and applies a non-linear transformation:
+
+\begin{equation}
+    g(z_r^l)=a_r^l
+\end{equation}
+
+Figure \ref{fig:perceptron} shows this process of the perceptron transforming our input $A^{l-1}$ into $z_r^l$ in the linear part, then applying a on-linear transformation to this to obtain the activation vector for the next layer $a_r^l$.
+% talk about sigmoid?
+
+\begin{figure}[H]
+\centering
+\centerline{\includesvg[width=0.9\columnwidth]{images/9-perceptron.svg}}
+\caption{\label{fig:perceptron}The perceptron, halved into two parts, the linear part and the non-linear part. The linear function (left half) outputs $z_r^l$, the dot product of activation vector $A^{l-1}$ and weight vector $w_r^l$. The non-linear function (right half) applies an activation to $z_r^l$ such as the sigmoid function $a_l^r=\sigma(z)=\frac{1}{1+e^{-z}}$ to output the activation vector $a_r^l$.}
+\end{figure}
+
+\subsection{Neural Network: A collection of Perceptrons}
+
+To create a neural network, we assemble a network of perceptrons organized into $L$ layers where each of the $n$ perceptrons in the current layer receives an activation vector $A^{l-1}$ of $m$ activations—one activation from each of the $m$ perceptrons in the previous layer as shown in Figure \ref{fig:NN}.
+
+\begin{figure}[H]
+\centering
+\centerline{\includesvg[width=0.75\columnwidth]{images/9.svg}}
+\caption{\label{fig:NN}A fully connected neural network, which maps $x\in X$ (given as input to the \textcolor{NavyBlue}{dark blue perceptrons}) to $\hat{y}\in Y$ (the output obtained from the \textcolor{YellowOrange}{orange perceptrons}). These are the input and output layers respectively. Every layer in between them is called a &#39;hidden layer&#39;.}
+\end{figure}
+
+For layer $l$ we assemble every perceptron&#39;s weight vector into the layer&#39;s \df{weight matrix}{}{notated as $\mathbf{W^l}$, this matrix stores the weights which we multiply by our vector from the previous layer $\mathbf{A^{l-1}}$ to obtain our preactivation vector $\mathbf{Z^l}$. We modify our weights throughout training to minimize our loss function and obtain the most accurate mapping from domain $X$ to codomain $Y$.} $W^l$ such that every column of $W^l$ is a perceptron weight vector as shown in equation \eqref{eq:W^l}.
+
+\begin{equation}\label{eq:W^l}
+    W^l=
+    \begin{bmatrix}
+        \mathbf{w_1^l} &amp; \mathbf{w_2^l} &amp; \dots &amp; \mathbf{w_n^l}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        w_{11}^l &amp; w_{21}^l &amp; \dots &amp; w_{n1}^l \\
+        w_{12}^l &amp; w_{22}^l &amp; \dots &amp; w_{n2}^l \\
+        \vdots &amp; \vdots &amp; \dots &amp; \vdots \\
+        w_{1m}^l &amp; w_{2m}^l &amp; \dots &amp; w_{nm}^l
+    \end{bmatrix}
+\end{equation}
+
+Recall the shape of activation vector $A^{l-1}$ as shown in equation \eqref{eq:bungus}.
+
+\begin{equation}\label{eq:bungus}
+    \mathbf{A^{l-1}}=
+    \begin{bmatrix}
+        a_1^{l-1} \\[0.5em]
+        a_2^{l-1} \\[0.5em]
+        \vdots \\[0.5em]
+        a_m^{l-1}
+    \end{bmatrix}
+\end{equation}
+
+To obtain our pre-activation vector $\mathbf{Z^l}$ as a matrix multiplication of our weights and activations we must \df{transpose}{}{DC} our weight matrix, seen in equation \eqref{eq:Z^l}.
+
+\begin{equation}\label{eq:Z^l}
+\begin{aligned}
+    \mathbf{Z^l}= &amp;
+    (W^l)^T\mathbf{A^{l-1}}=
+    \begin{bmatrix}
+        w_{11}^l &amp; w_{12}^l &amp; \dots &amp; w_{1m}^l \\[0.5em]
+        w_{21}^l &amp; w_{22}^l &amp; \dots &amp; w_{2m}^l \\[0.5em]
+        \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\[0.5em]
+        w_{n1}^l &amp; w_{n2}^l &amp; \dots &amp; w_{nm}^l
+    \end{bmatrix}
+    \begin{bmatrix}
+        a_1^{l-1} \\[0.5em]
+        a_2^{l-1} \\[0.5em]
+        \vdots \\[0.5em]
+        a_m^{l-1}
+    \end{bmatrix}
+    \\
+    = &amp;
+    \begin{bmatrix}
+        w_{11}^la_1^{l-1}+w_{12}^la_2^{l-1}+\dots+w_{1m}^la_m^{l-1} \\[0.5em]
+        w_{21}^la_1^{l-1}+w_{22}^la_2^{l-1}+\dots+w_{2m}^la_m^{l-1} \\[0.5em]
+        \vdots \\[0.5em]
+        w_{n1}^la_1^{l-1}+w_{n2}^la_2^{l-1}+\dots+w_{nm}^la_m^{l-1}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        z_1^{l} \\[0.5em]
+        z_2^{l} \\[0.5em]
+        \vdots \\[0.5em]
+        z_n^{l}
+    \end{bmatrix}
+\end{aligned}
+\end{equation}
+
+Equation \eqref{eq:transpose algebra} shows a dimensional analysis of the matrix multiplication to clearly show why we must take the transpose of $W^l$.
+
+\begin{equation}\label{eq:transpose algebra}
+\begin{aligned}
+    \mathbf{Z^l}&amp;=(W^l)^T\mathbf{A^{l-1}}=(m\times n)^T\times(m\times1)=(n\times m)\times(m\times1) \\
+    &amp;=(n\times m)
+\end{aligned}
+\end{equation}
+
+We then apply our non-linear activation function $g$ to each element in our preactivation vector $Z^l$ to obtain our activation vector $A^l$ as shown in equation \eqref{eq:A^l}, which we use for the next layer in our network.
+
+\begin{equation}\label{eq:A^l}
+    \mathbf{A^l}=g(\mathbf{Z^l})=
+    \begin{bmatrix}
+        g(z_1^{l}) \\[0.5em]
+        g(z_2^{l}) \\[0.5em]
+        \vdots \\[0.5em]
+        g(z_n^{l})
+    \end{bmatrix}
+\end{equation}
+
+\subsection{Formal Definition of a Neural Network}
+Neural networks can initially appear to be magical black boxes that somehow do everything. They can draw like Picasso, play chess better than Magnus Carlsen, and code programs from simple word prompts. However, upon closer examination we realize that a neural network is simply a function $\hat{y}=\mathcal{F}(x)$ that maps our domain to the codomain, $\mathcal{F}:X\rightarrow Y$. The network learns this mapping by training on a dataset which maps a subset of our domain to the codomain.
+
+Formally, given a dataset of pairs $\{x^{(i)},y^{(i)}\}$, which is a \df{partial mapping}{}{we use the symbol $\rightharpoonup$ to denote a partial mapping, which maps a subset of our domain to $X$ to the codomain $Y$.} $D:X\rightharpoonup Y$, we define a \df{loss function}{}{$\mathcal{L}(\hat{y},y)$ measures the discrepancy between our neural network&#39;s mapped output $\hat{y}$, and the true output $y$ from our dataset.} $\mathcal{L}(\hat{y},y)$ representing the discrepancy between our network&#39;s mapping $\hat{y}$ and the mapping $y$ from our dataset, and in each training iteration we update the network&#39;s set of \df{weights}{}{DC} $W$ to minimize this loss: 
+\begin{equation}
+    W_{new}=\argmin_W\mathcal{L}(\hat{y},y)=W_{old}-\alpha\nabla_W\mathcal{L}(\hat{y},y)
+\end{equation}
+Eventually the marginal decrease in our loss function $\mathcal{L}$ approaches zero, at which point the network has \df{converged}{converge}{we say a function converges once it reaches an equilibrium at which point it stops changing. In machine learning, this means the marginal decrease in our loss function $\mathcal{L}(\hat{y},y)$ falls below some $1&gt;\epsilon&gt;0$.} and we have maximized the correspondence between the network&#39;s mapping and the dataset&#39;s partial mapping.
+
+\subsection{Non-linear Activation Functions}
+
+Let&#39;s examine perceptron in layer $l$ and row $r$ of our network. We know that the perceptron needs a non-linear activation function $g$ to modify the linear combination $z_r^l=\mathbf{A^{l-1}\cdot w_r^l}$ (preactivation) in order order to form non-linear decision boundaries, but how do we choose a good $g$? Let&#39;s recall our definition of a neuron&#39;s activation
+$$
+a_i\in\mathbb{R}:a_i\in[0,1]
+$$
+which states that the activation lies somewhere in the range from 0 to 1. Therefore, we want our function $g$ to bind our preactivation $z$ to this range. Figure \ref{fig:sigmoid} shows the \df{sigmoid}{}{also referred to as the logistic function, the sigmoid is a monotonic increasing activation function which maps the domain to the range $(0,1)$. It is defined by $\sigma(z)=1/(1+e^{-z})$. Its derivative is more expensive to calculate because it has an exponent and it is more susceptible to the vanishing gradient problem.} activation function $\sigma(z)$ (also known as the \df{logistic}{logistic function}{another name for the sigmoid activation function.} function), which is bound by the horizontal asymptotes at $y=0$ and $y=1$. $\sigma(z)$ approaches these asymptotes, but never takes on their value, so we can say that $\sigma(z)\in\mathbb{R}:\sigma(z)\in(0,1)$.
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[declare function={sigma(\x)=1/(1+exp(-\x));
+sigmap(\x)=sigma(\x)*(1-sigma(\x));}]
+\begin{axis}%
+[
+    grid=major,     
+    xmin=-6,
+    xmax=6,
+    axis x line=bottom,
+    ytick={0,.25,.5,1},
+    ymax=1,
+    axis y line=middle,
+    samples=100,
+    domain=-6:6,
+    legend style={at={(1,0.9)}}     
+]
+    \addplot[cyan,ultra thick, mark=none]   (x,{sigma(x)});
+    \addplot[YellowOrange,ultra thick, dotted, mark=none]   (x,{sigmap(x)});
+    \legend{$\sigma(z)$,$\sigma&#39;(z)$}
+\end{axis}
+\end{tikzpicture}
+\caption{\label{fig:sigmoid}The sigmoid activation function $\sigma(z)=1/(1+e^{-z})$ and its derivative $\sigma&#39;(z)=\sigma(z)(1-\sigma(z))$.}
+\end{figure}
+
+Notice how $\sigma(z)$ looks linear as we get closer to $z=0$. It looks like the line $y=0.25z+0.5$, which we can verify by looking at the derivative of the sigmoid, $\sigma&#39;(z)$, which is plotted in orange dots in the same figure. We can verify this by looking at figure \ref{fig:sigmoid} and which shows the sigmoid&#39;s derivative $\sigma&#39;(z)$ having a value of $0.25$ at $z=0$. The sigmoid function is \df{monotonic}{}{a function is monotonic increasing if it never decreases across the whole domain (meaning it only increases or remains constant). If a function never increases, it is monotonic decreasing.} increasing, meaning as $z$ increases, $\sigma(z)$ either increases or remains constant, but never decreases. It is also differentiable across the whole domain. However, one drawback is that it is computationally expensive to calculate due to there being an exponent in the expression (recall that the function is $\sigma(z)=\frac{1}{1+e^{-z}}$). 
+
+Furthermore, we may face the \df{vanishing gradient}{}{in backpropagation we update each layer&#39;s weight matrix using the formula $W_{t+1}^l=W_t^l-\alpha\pdv{\mathcal{J}}{W^l}$} problem during backpropagation, where the gradient of our loss function with respect to each weight becomes so small that we cannot . %DC
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[declare function={
+tanhmap(\x)=(2/(exp(\x)+exp(-\x)))^2;}]
+\begin{axis}%
+[
+    grid=major,     
+    xmin=-6,
+    xmax=6,
+    axis x line=middle,
+    ytick={-1,-.5,0,.5,1},
+    ymax=1,
+    axis y line=middle,
+    samples=100,
+    domain=-6:6,
+    legend style={at={(1,0.9)}}     
+]
+    \addplot[cyan,ultra thick, mark=none]   (x,{tanh(x)});
+    \addplot[YellowOrange,ultra thick, dotted, mark=none]   (x,{tanhmap(x)});
+    \legend{$tanh(x)$,$tanh&#39;(x)$}
+\end{axis}
+\end{tikzpicture}
+\caption{\label{fig:tanh}Tanh}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[declare function={swish(\x)=\x/(1+exp(-\x));swishmap(\x)=\x/(1+exp(-\x))+(1/(1+exp(-\x))*(1-\x/(1+exp(-\x)));swishdoublemap(\x)=exp(-\x)*(exp(-\x)*\x-\x+2*exp(-\x)+2)/(1+exp(-\x))^3);}]
+\begin{axis}%
+[
+    grid=major,     
+    xmin=-6,
+    xmax=6,
+    axis x line=middle,
+    ytick={0,.5,1},
+    ymax=1.2,
+    axis y line=middle,
+    samples=100,
+    domain=-6:6,
+    legend style={at={(1,0.7)}}     
+]
+    \addplot[cyan,ultra thick, mark=none]   (x,{swish(x)});
+    \addplot[YellowOrange, ultra thick, dotted, mark=none]   (x,{swishmap(x)});
+    \addplot[brown, very thick, dotted, mark=none]   (x,{swishdoublemap(x)});
+    \legend{$swish(x)$,$swish&#39;(x)$,$swish&#39;&#39;(x)$}
+\end{axis}
+\end{tikzpicture}
+\caption{\label{fig:swish}Swish}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}%
+[
+    grid=major,     
+    xmin=-6,
+    xmax=6,
+    axis x line=middle,
+    ytick={-1,0,1,2,4,6},
+    ymin=-1,
+    ymax=6,
+    axis y line=middle,
+    samples=100,
+    domain=-6:6,
+    legend style={at={(0.4,0.9)}} 
+]
+    \addplot+[mark=none,cyan,ultra thick,domain=-6:0] {0};
+    \addplot+[mark=none,YellowOrange,dotted,ultra thick,domain=-6:0] {0};
+    \addplot+[mark=none,cyan,ultra thick,domain=0:6] {x};
+    \addplot+[mark=none,YellowOrange,dotted,ultra thick,domain=0:6] {1};
+    \legend{$ReLU(x)$,$ReLU&#39;(x)$}
+\end{axis}
+
+\end{tikzpicture}
+\caption{\label{fig:relu}ReLU}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}%
+[
+    grid=major,     
+    xmin=-6,
+    xmax=6,
+    axis x line=middle,
+    ytick={-1,0,0.1,1,2,4,6},
+    ymin=-1,
+    ymax=6,
+    axis y line=middle,
+    samples=100,
+    domain=-6:6,
+    legend style={at={(0.55,0.9)}} 
+]
+    \addplot+[mark=none,cyan,ultra thick,domain=-6:0] {0.1*x};
+    \addplot+[mark=none,YellowOrange,dotted,ultra thick,domain=-6:0] {0.1};
+    \addplot+[mark=none,cyan,ultra thick,domain=0:6] {x};
+    \addplot+[mark=none,YellowOrange,dotted,ultra thick,domain=0:6] {1};
+    \legend{$LeakyReLU(x)$,$LeakyReLU&#39;(x)$}
+\end{axis}
+\end{tikzpicture}
+\caption{\label{fig:LeakyReLU}LeakyReLU}
+\end{figure}
+
+
+\end{document}
+
+\subsection{Batch Gradient Descent}
+
+\subsection{Non-Convex Optimization}
+
+\subsection{Newtonian Methods}
+
+\end{document}
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/65ca525c8d7745719c1444ce71fbb23271114f06b7a75d5afde9dccd7c9a720c.svg" src="../_images/65ca525c8d7745719c1444ce71fbb23271114f06b7a75d5afde9dccd7c9a720c.svg" /></div>
+</div>
+</section>
+<section id="debugging">
+<h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this heading">#</a></h2>
+<p>Often when developing LaTeX code inside Jupyter and you get an errors. If you want to see the error log produced by <code class="docutils literal notranslate"><span class="pre">pdflatex</span></code> you can change the magic command to <code class="docutils literal notranslate"><span class="pre">%%texdebug</span></code> and <code class="docutils literal notranslate"><span class="pre">jupytexmagic</span></code> will output what’s wrong with the code. See the example below.</p>
+<p><em>Note: the rendering of the <code class="docutils literal notranslate"><span class="pre">svg</span></code> format with text only works well in jupyter lab for some reason.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">texdebug</span>
+\title{9: Neural Networks and Artificial Intelligence}
+\date{}
+\begin{document}
+\begin{equation}\label{eq:linear combo hyperplane}
+    a_i  =  w_1a_1+w_2a_2+\ldots+w_na_n 
+     = 
+    \begin{bmatrix}
+        w_1 \\
+        w_2 \\
+        \vdots \\
+        w_n
+    \end{bmatrix}
+    \cdot
+    \begin{bmatrix}
+        a_1 \\
+        a_2 \\
+        \vdots \\
+        a_2
+    \end{bmatrix}=
+    \mathbf{w_N}\cdot\mathbf{a_N}
+\end{equation}
+\end{document}
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex)
+ \write18 enabled.
+entering extended mode
+(/var/folders/x1/frlndvdd2158sbgrcspfnv_w0000gn/T/tmp9lgqkope/temp.tex
+LaTeX2e &lt;2022-11-01&gt; patch level 1
+L3 programming layer &lt;2023-02-22&gt;
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/standalone/
+standalone.cls
+Document Class: standalone 2022/10/10 v1.3b Class to compile TeX sub-files stan
+dalone
+
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/tools/shell
+esc.sty)
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/iftex/ifl
+uatex.sty
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/iftex/ift
+ex.sty))
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/xkeyval/xke
+yval.sty
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/xkeyval/x
+keyval.tex
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/xkeyval/x
+kvutils.tex
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/xkeyval/k
+eyval.tex))))
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/standalone/
+standalone.cfg)
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/base/articl
+e.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/base/size10
+.clo))
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/varwidth/va
+rwidth.sty))
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/l3backend/l
+3backend-pdftex.def)
+No file temp.aux.
+
+! LaTeX Error: Environment bmatrix undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.7     \begin{bmatrix}
+                       
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.7     \begin{bmatrix}
+                       
+!  ==&gt; Fatal error occurred, no output PDF file produced!
+Transcript written on /var/folders/x1/frlndvdd2158sbgrcspfnv_w0000gn/T/tmp9lgqk
+ope/temp.log.
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">CalledProcessError</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_cell_magic</span><span class="p">(</span><span class="s1">&#39;texdebug&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">title{9: Neural Networks and Artificial Intelligence}</span><span class="se">\n\\</span><span class="s1">date</span><span class="si">{}</span><span class="se">\n\\</span><span class="s1">begin</span><span class="si">{document}</span><span class="se">\n\\</span><span class="s1">begin</span><span class="si">{equation}</span><span class="se">\\</span><span class="s1">label{eq:linear combo hyperplane}</span><span class="se">\n</span><span class="s1">    a_i  =  w_1a_1+w_2a_2+</span><span class="se">\\</span><span class="s1">ldots+w_na_n </span><span class="se">\n</span><span class="s1">     = </span><span class="se">\n</span><span class="s1">    </span><span class="se">\\</span><span class="s1">begin</span><span class="si">{bmatrix}</span><span class="se">\n</span><span class="s1">        w_1 </span><span class="se">\\\\\n</span><span class="s1">        w_2 </span><span class="se">\\\\\n</span><span class="s1">        </span><span class="se">\\</span><span class="s1">vdots </span><span class="se">\\\\\n</span><span class="s1">        w_n</span><span class="se">\n</span><span class="s1">    </span><span class="se">\\</span><span class="s1">end</span><span class="si">{bmatrix}</span><span class="se">\n</span><span class="s1">    </span><span class="se">\\</span><span class="s1">cdot</span><span class="se">\n</span><span class="s1">    </span><span class="se">\\</span><span class="s1">begin</span><span class="si">{bmatrix}</span><span class="se">\n</span><span class="s1">        a_1 </span><span class="se">\\\\\n</span><span class="s1">        a_2 </span><span class="se">\\\\\n</span><span class="s1">        </span><span class="se">\\</span><span class="s1">vdots </span><span class="se">\\\\\n</span><span class="s1">        a_2</span><span class="se">\n</span><span class="s1">    </span><span class="se">\\</span><span class="s1">end</span><span class="si">{bmatrix}</span><span class="s1">=</span><span class="se">\n</span><span class="s1">    </span><span class="se">\\</span><span class="s1">mathbf</span><span class="si">{w_N}</span><span class="se">\\</span><span class="s1">cdot</span><span class="se">\\</span><span class="s1">mathbf</span><span class="si">{a_N}</span><span class="se">\n\\</span><span class="s1">end</span><span class="si">{equation}</span><span class="se">\n\\</span><span class="s1">end</span><span class="si">{document}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.10/site-packages/IPython/core/interactiveshell.py:2493,</span> in <span class="ni">InteractiveShell.run_cell_magic</span><span class="nt">(self, magic_name, line, cell)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2491</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2492</span>     <span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="n">magic_arg_s</span><span class="p">,</span> <span class="n">cell</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">2493</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2495</span> <span class="c1"># The code below prevents the output from being displayed</span>
+<span class="g g-Whitespace">   </span><span class="mi">2496</span> <span class="c1"># when using magics with decorator @output_can_be_silenced</span>
+<span class="g g-Whitespace">   </span><span class="mi">2497</span> <span class="c1"># when the last Python token in the expression is a &#39;;&#39;.</span>
+<span class="g g-Whitespace">   </span><span class="mi">2498</span> <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">magic</span><span class="o">.</span><span class="n">MAGIC_OUTPUT_CAN_BE_SILENCED</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.10/site-packages/jupytexmagic/jupytexmagic.py:55,</span> in <span class="ni">Jupytex.texdebug</span><span class="nt">(self, line, cell)</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span>     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;\pagenumbering</span><span class="si">{gobble}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span>     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">cell</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">55</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;pdflatex&#39;</span><span class="p">,</span> <span class="s1">&#39;-shell-escape&#39;</span><span class="p">,</span> <span class="s1">&#39;-output-directory&#39;</span><span class="p">,</span> <span class="n">tmpdir</span><span class="p">,</span> <span class="n">tex_path</span><span class="p">],</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">&quot;pdfcrop&quot;</span><span class="p">,</span> <span class="n">pdf_path</span><span class="p">,</span> <span class="n">pdf_path</span><span class="p">])</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="n">svg_path</span> <span class="o">=</span> <span class="n">pdf_path</span><span class="p">[:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;.svg&quot;</span>    
+
+<span class="nn">File ~/miniconda3/lib/python3.10/subprocess.py:526,</span> in <span class="ni">run</span><span class="nt">(input, capture_output, timeout, check, *popenargs, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">524</span>     <span class="n">retcode</span> <span class="o">=</span> <span class="n">process</span><span class="o">.</span><span class="n">poll</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">525</span>     <span class="k">if</span> <span class="n">check</span> <span class="ow">and</span> <span class="n">retcode</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">526</span>         <span class="k">raise</span> <span class="n">CalledProcessError</span><span class="p">(</span><span class="n">retcode</span><span class="p">,</span> <span class="n">process</span><span class="o">.</span><span class="n">args</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">527</span>                                  <span class="n">output</span><span class="o">=</span><span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">stderr</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">528</span> <span class="k">return</span> <span class="n">CompletedProcess</span><span class="p">(</span><span class="n">process</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="n">retcode</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="p">)</span>
+
+<span class="ne">CalledProcessError</span>: Command &#39;[&#39;pdflatex&#39;, &#39;-shell-escape&#39;, &#39;-output-directory&#39;, &#39;/var/folders/x1/frlndvdd2158sbgrcspfnv_w0000gn/T/tmp9lgqkope&#39;, &#39;/var/folders/x1/frlndvdd2158sbgrcspfnv_w0000gn/T/tmp9lgqkope/temp.tex&#39;]&#39; returned non-zero exit status 1.
+</pre></div>
+</div>
+</div>
+</div>
+<section id="fixing-the-error">
+<h3>Fixing the error<a class="headerlink" href="#fixing-the-error" title="Permalink to this heading">#</a></h3>
+<p>I can see from the error log that I forgot to import the package that includes the <code class="docutils literal notranslate"><span class="pre">bmatrix</span></code> command (i.e. <code class="docutils literal notranslate"><span class="pre">amsmath</span></code>).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>! LaTeX Error: Environment bmatrix undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.8     \begin{bmatrix}
+                       
+? 
+! Emergency stop.
+</pre></div>
+</div>
+<p>Let’s try again, adding in the proper imports. It now works!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">texdebug</span>
+\usepackage{amsmath}
+\title{9: Neural Networks and Artificial Intelligence}
+\date{}
+\begin{document}
+\begin{equation}\label{eq:linear combo hyperplane}
+    a_i  =  w_1a_1+w_2a_2+\ldots+w_na_n 
+     = 
+    \begin{bmatrix}
+        w_1 \\
+        w_2 \\
+        \vdots \\
+        w_n
+    \end{bmatrix}
+    \cdot
+    \begin{bmatrix}
+        a_1 \\
+        a_2 \\
+        \vdots \\
+        a_2
+    \end{bmatrix}=
+    \mathbf{w_N}\cdot\mathbf{a_N}
+\end{equation}
+\end{document}
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex)
+ \write18 enabled.
+entering extended mode
+(/var/folders/x1/frlndvdd2158sbgrcspfnv_w0000gn/T/tmprdas989x/temp.tex
+LaTeX2e &lt;2022-11-01&gt; patch level 1
+L3 programming layer &lt;2023-02-22&gt;
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/standalone/
+standalone.cls
+Document Class: standalone 2022/10/10 v1.3b Class to compile TeX sub-files stan
+dalone
+
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/tools/shell
+esc.sty)
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/iftex/ifl
+uatex.sty
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/iftex/ift
+ex.sty))
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/xkeyval/xke
+yval.sty
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/xkeyval/x
+keyval.tex
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/xkeyval/x
+kvutils.tex
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/xkeyval/k
+eyval.tex))))
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/standalone/
+standalone.cfg)
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/base/articl
+e.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/base/size10
+.clo))
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/varwidth/va
+rwidth.sty))
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/amsmath/ams
+math.sty
+For additional information on amsmath, use the `?&#39; option.
+
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/amsmath/ams
+text.sty
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/amsmath/ams
+gen.sty))
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/amsmath/ams
+bsy.sty)
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/amsmath/ams
+opn.sty))
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/l3backend/l
+3backend-pdftex.def)
+No file temp.aux.
+[1{/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/map/pdftex/up
+dmap/pdftex.map}]
+(/var/folders/x1/frlndvdd2158sbgrcspfnv_w0000gn/T/tmprdas989x/temp.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )&lt;/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb&gt;&lt;/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbx7.pfb&gt;&lt;/opt/homebrew/Cellar/texlive/202303
+13_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb&gt;&lt;/opt/homebrew/
+Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
+0.pfb&gt;&lt;/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi7.pfb&gt;&lt;/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb&gt;&lt;/opt/homebrew/Cellar/texlive/202
+30313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb&gt;&lt;/opt/homebrew
+/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb&gt;
+Output written on /var/folders/x1/frlndvdd2158sbgrcspfnv_w0000gn/T/tmprdas989x/
+temp.pdf (1 page, 70394 bytes).
+Transcript written on /var/folders/x1/frlndvdd2158sbgrcspfnv_w0000gn/T/tmprdas9
+89x/temp.log.
+PDFCROP 1.40, 2020/06/06 - Copyright (c) 2002-2020 by Heiko Oberdiek, Oberdiek Package Support Group.
+==&gt; 1 page written on `/var/folders/x1/frlndvdd2158sbgrcspfnv_w0000gn/T/tmprdas989x/temp.pdf&#39;.
+</pre></div>
+</div>
+<img alt="../_images/a7bd16ff873404cfc748de5b3a9dfc3fe5c974ba969a93d0e68bebdb4eae2c22.svg" src="../_images/a7bd16ff873404cfc748de5b3a9dfc3fe5c974ba969a93d0e68bebdb4eae2c22.svg" /></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./jupytexmagic"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Jupytexmagic.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Jupytexmagic</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Extensions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Extensions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-runs">Example Runs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging">Debugging</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-the-error">Fixing the error</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Boston University OPE Group
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
