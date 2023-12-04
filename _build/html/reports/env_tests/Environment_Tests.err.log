@@ -1,0 +1,88 @@
+Traceback (most recent call last):
+  File "/Users/zhangyiqin/anaconda3/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/zhangyiqin/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Users/zhangyiqin/anaconda3/lib/python3.9/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Users/zhangyiqin/anaconda3/lib/python3.9/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/Users/zhangyiqin/anaconda3/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/Users/zhangyiqin/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/Users/zhangyiqin/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/zhangyiqin/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import os
+
+#Verify environment variables are correct
+
+NB_UID = int(os.environ['NB_UID'])
+NB_GID = int(os.environ['NB_GID'])
+NB_GROUP = os.environ['NB_GROUP']
+
+XDG_CACHE_HOME = f"/home/{NB_USER}/.cache/"
+
+UID_LOWER_BOUND = 2000  
+UID_UPPER_BOUND = 60000 
+
+GID_LOWER_BOUND = 2000  
+GID_UPPER_BOUND = 60000 
+
+EXPECTED_NB_GROUP = 'root'
+
+err = []
+
+def check_environment_test():
+    if not (UID_LOWER_BOUND <= NB_UID <= UID_UPPER_BOUND):
+         err.append(f"NB_UID {NB_UID} is not within the acceptable range: {UID_LOWER_BOUND}-{UID_UPPER_BOUND}.")
+
+
+    if not (GID_LOWER_BOUND <= NB_GID <= GID_UPPER_BOUND):
+         err.append(f"NB_GID {NB_GID} is not within the acceptable range: {GID_LOWER_BOUND}-{GID_UPPER_BOUND}.")
+
+
+    if  NB_GROUP != EXPECTED_NB_GROUP:
+         err.append("NB_GROUP does not match " + "'" + EXPECTED_NB_GROUP + "'")
+
+
+    if NB_USER != 'jovyan':
+         err.append("NB_USER does not match 'jovyan'.")
+
+
+    if XDG_CACHE_HOME != '/home/jovyan/.cache/':
+         err.append("XDD_CACHE_HOME does not match expected path: /home/jovyan/.cache/")
+
+
+    if len(err) != 0:
+         err.append("Environmental Variables test")
+
+    else:
+        s = '; '.join(err)
+        print("Environmental Variables test ERROR: " + s)
+    
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+[0;32m/var/folders/df/vqrt_6yx3f962pmw8c8mwxyw0000gn/T/ipykernel_50013/3757027472.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      3[0m [0;31m#Verify environment variables are correct[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m [0;34m[0m[0m
+[0;32m----> 5[0;31m [0mNB_UID[0m [0;34m=[0m [0mint[0m[0;34m([0m[0mos[0m[0;34m.[0m[0menviron[0m[0;34m[[0m[0;34m'NB_UID'[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      6[0m [0mNB_GID[0m [0;34m=[0m [0mint[0m[0;34m([0m[0mos[0m[0;34m.[0m[0menviron[0m[0;34m[[0m[0;34m'NB_GID'[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      7[0m [0mNB_GROUP[0m [0;34m=[0m [0mos[0m[0;34m.[0m[0menviron[0m[0;34m[[0m[0;34m'NB_GROUP'[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/anaconda3/lib/python3.9/os.py[0m in [0;36m__getitem__[0;34m(self, key)[0m
+[1;32m    677[0m         [0;32mexcept[0m [0mKeyError[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    678[0m             [0;31m# raise KeyError with the original key value[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 679[0;31m             [0;32mraise[0m [0mKeyError[0m[0;34m([0m[0mkey[0m[0;34m)[0m [0;32mfrom[0m [0;32mNone[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    680[0m         [0;32mreturn[0m [0mself[0m[0;34m.[0m[0mdecodevalue[0m[0;34m([0m[0mvalue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    681[0m [0;34m[0m[0m
+
+[0;31mKeyError[0m: 'NB_UID'
+KeyError: 'NB_UID'
+

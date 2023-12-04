@@ -1,0 +1,871 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Environment_Tests &#8212; OPE Features</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'env_tests/Environment_Tests';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Setting up Github Actions and Quay.io" href="../github_actions/gh.html" />
+    <link rel="prev" title="Publish" href="../workflow_tests/Publish.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../features_intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/tesseract_lego.svg" class="logo__image only-light" alt="OPE Features - Home"/>
+    <script>document.write(`<img src="../_static/tesseract_lego.svg" class="logo__image only-dark" alt="OPE Features - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../features_intro.html">
+                    Enhanced OPE
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Testing Documentation</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workflow_tests/Container_Tests.html">Container_Tests</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_tests/Health.html">Health</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_tests/Image_version.html">Image_version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_tests/Jupyter_nb.html">Jupyter_Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_tests/Package_version.html">Package_version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_tests/Checksum.html">Checksum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_tests/Size_and_time.html">Size_and_time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_tests/UI.html">UI (Testing RISE and Jupyter Lab)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_tests/Approval.html">Approval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow_tests/Publish.html">Publish</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Environment_Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github_actions/gh.html">Setting up Github Actions and Quay.io</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OPE Command Line Tool</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../OPE_Command_Line_Tool/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OPE_Command_Line_Tool/instruction.html">Instruction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Features Documentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../jupytexmagic/Jupytexmagic.html">Jupytexmagic</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../jupytexmagic/Getting_Started.html">Getting_Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jupytexmagic/Extensions.html">Extensions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../gradescope_autograder/Gradescope_Autograder.html">Gradescope_Autograder</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gradescope_autograder/Extensions.html">Extensions</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous Documentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../misc/Miscellaneous.html">Miscellaneous</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyterhub-opf-jupyterhub.apps.smaug.na.operate-first.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/rkulskis/enhanced-ope&urlpath=lab/tree/enhanced-ope/content/env_tests/Environment_Tests.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/rkulskis/enhanced-ope" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/rkulskis/enhanced-ope/edit/main/content/env_tests/Environment_Tests.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/rkulskis/enhanced-ope/issues/new?title=Issue%20on%20page%20%2Fenv_tests/Environment_Tests.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/env_tests/Environment_Tests.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Environment_Tests</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-permission-to-home-directory-test">Write Permission to Home Directory Test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environmental-variables-test">Environmental Variables test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#network-test">Network Test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pip-conda-test">Pip-Conda Test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-and-ssh-test">Git and SSH Test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-directory-test">Conda Directory Test</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="environment-tests">
+<h1>Environment_Tests<a class="headerlink" href="#environment-tests" title="Permalink to this heading">#</a></h1>
+<p>These tests are grouped into a single notebook called <code class="docutils literal notranslate"><span class="pre">all_tests.ipynb</span></code> which you can run using the <code class="docutils literal notranslate"><span class="pre">ope</span> <span class="pre">test</span></code> command. Running this command outputs the results of the tests, separating them into two groups of <code class="docutils literal notranslate"><span class="pre">PASSED</span> <span class="pre">TESTS</span></code> and <code class="docutils literal notranslate"><span class="pre">FAILED</span> <span class="pre">TESTS</span></code>. We keep track of these groups using the global variables <code class="docutils literal notranslate"><span class="pre">ERRORS</span></code> and <code class="docutils literal notranslate"><span class="pre">PASSES</span></code> which are initialized below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># global var to keep track of test results we have</span>
+<span class="n">ERRORS</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">PASSES</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="write-permission-to-home-directory-test">
+<h2>Write Permission to Home Directory Test<a class="headerlink" href="#write-permission-to-home-directory-test" title="Permalink to this heading">#</a></h2>
+<p>This test checks whether the user running the Jupyter Notebook has write permissions to their home directory. It does so by attempting to create a temporary file in the user’s home directory and then deleting it. If the test succeeds, it confirms that the user has write permissions to their home directory.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="k">def</span> <span class="nf">shelltest</span><span class="p">(</span><span class="n">CMD</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">ERRORS</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">(</span><span class="n">CMD</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">STDOUT</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">CalledProcessError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">e</span><span class="o">.</span><span class="n">returncode</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">output</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>  <span class="c1"># new add: handle exceptions </span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+<span class="c1"># Test to check write permissions to home directory</span>
+<span class="n">TEST</span> <span class="o">=</span> <span class="s2">&quot;WRITE PERMISSION TO HOME DIRECTORY&quot;</span>
+<span class="n">CMD</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;touch </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">/test_write_permissions.tmp &amp;&amp; echo &#39;Write Permission: Yes&#39; &amp;&amp; rm </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">/test_write_permissions.tmp || echo &#39;Write Permission: No&#39;&quot;</span>
+
+<span class="c1"># Execute Test</span>
+<span class="n">e</span><span class="p">,</span> <span class="n">output</span> <span class="o">=</span> <span class="n">shelltest</span><span class="p">(</span><span class="n">CMD</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">e</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">PASSES</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Write Permission to Home Directory test&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">ERRORS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="environmental-variables-test">
+<h2>Environmental Variables test<a class="headerlink" href="#environmental-variables-test" title="Permalink to this heading">#</a></h2>
+<p>The Environmental Variables test verifies that the environment variables set during the Dockerfile setup are correctly maintained within the Jupyter Notebook. Additionally, it checks if the user has a valid User ID (UID) and Group ID (GID) within a customizable range. This test ensures that the required environment variables are correctly set up and that the user’s UID and GID are within acceptable bounds.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1">#Verify environment variables are correct</span>
+
+<span class="n">NB_UID</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;NB_UID&#39;</span><span class="p">])</span>
+<span class="n">NB_GID</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;NB_GID&#39;</span><span class="p">])</span>
+<span class="n">NB_GROUP</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;NB_GROUP&#39;</span><span class="p">]</span>
+
+<span class="n">XDG_CACHE_HOME</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/home/</span><span class="si">{</span><span class="n">NB_USER</span><span class="si">}</span><span class="s2">/.cache/&quot;</span>
+
+<span class="n">UID_LOWER_BOUND</span> <span class="o">=</span> <span class="mi">2000</span>  
+<span class="n">UID_UPPER_BOUND</span> <span class="o">=</span> <span class="mi">60000</span> 
+
+<span class="n">GID_LOWER_BOUND</span> <span class="o">=</span> <span class="mi">2000</span>  
+<span class="n">GID_UPPER_BOUND</span> <span class="o">=</span> <span class="mi">60000</span> 
+
+<span class="n">EXPECTED_NB_GROUP</span> <span class="o">=</span> <span class="s1">&#39;root&#39;</span>
+
+<span class="n">err</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">def</span> <span class="nf">check_environment_test</span><span class="p">():</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">UID_LOWER_BOUND</span> <span class="o">&lt;=</span> <span class="n">NB_UID</span> <span class="o">&lt;=</span> <span class="n">UID_UPPER_BOUND</span><span class="p">):</span>
+         <span class="n">err</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;NB_UID </span><span class="si">{</span><span class="n">NB_UID</span><span class="si">}</span><span class="s2"> is not within the acceptable range: </span><span class="si">{</span><span class="n">UID_LOWER_BOUND</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">UID_UPPER_BOUND</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">GID_LOWER_BOUND</span> <span class="o">&lt;=</span> <span class="n">NB_GID</span> <span class="o">&lt;=</span> <span class="n">GID_UPPER_BOUND</span><span class="p">):</span>
+         <span class="n">err</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;NB_GID </span><span class="si">{</span><span class="n">NB_GID</span><span class="si">}</span><span class="s2"> is not within the acceptable range: </span><span class="si">{</span><span class="n">GID_LOWER_BOUND</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">GID_UPPER_BOUND</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+
+
+    <span class="k">if</span>  <span class="n">NB_GROUP</span> <span class="o">!=</span> <span class="n">EXPECTED_NB_GROUP</span><span class="p">:</span>
+         <span class="n">err</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;NB_GROUP does not match &quot;</span> <span class="o">+</span> <span class="s2">&quot;&#39;&quot;</span> <span class="o">+</span> <span class="n">EXPECTED_NB_GROUP</span> <span class="o">+</span> <span class="s2">&quot;&#39;&quot;</span><span class="p">)</span>
+
+
+    <span class="k">if</span> <span class="n">NB_USER</span> <span class="o">!=</span> <span class="s1">&#39;jovyan&#39;</span><span class="p">:</span>
+         <span class="n">err</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;NB_USER does not match &#39;jovyan&#39;.&quot;</span><span class="p">)</span>
+
+
+    <span class="k">if</span> <span class="n">XDG_CACHE_HOME</span> <span class="o">!=</span> <span class="s1">&#39;/home/jovyan/.cache/&#39;</span><span class="p">:</span>
+         <span class="n">err</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;XDD_CACHE_HOME does not match expected path: /home/jovyan/.cache/&quot;</span><span class="p">)</span>
+
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">err</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+         <span class="n">err</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Environmental Variables test&quot;</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Environmental Variables test ERROR: &quot;</span> <span class="o">+</span> <span class="n">s</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">df</span><span class="o">/</span><span class="n">vqrt_6yx3f962pmw8c8mwxyw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_50013</span><span class="o">/</span><span class="mf">3757027472.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1">#Verify environment variables are correct</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">NB_UID</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;NB_UID&#39;</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">NB_GID</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;NB_GID&#39;</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">NB_GROUP</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;NB_GROUP&#39;</span><span class="p">]</span>
+
+<span class="nn">~/anaconda3/lib/python3.9/os.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">    </span><span class="mi">677</span>         <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">678</span>             <span class="c1"># raise KeyError with the original key value</span>
+<span class="ne">--&gt; </span><span class="mi">679</span>             <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">680</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">decodevalue</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">681</span> 
+
+<span class="ne">KeyError</span>: &#39;NB_UID&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="network-test">
+<h2>Network Test<a class="headerlink" href="#network-test" title="Permalink to this heading">#</a></h2>
+<p>This test ensures that the container has a connection to the internet. We use both <code class="docutils literal notranslate"><span class="pre">ping</span></code> and <code class="docutils literal notranslate"><span class="pre">curl</span></code> because some systems may not have one of these utilities by default—in our case, our cluster configuration did not include <code class="docutils literal notranslate"><span class="pre">ping</span></code> by default. If either <code class="docutils literal notranslate"><span class="pre">ping</span></code> or <code class="docutils literal notranslate"><span class="pre">curl</span></code> works properly, then the container is connected to the internet and the test passes, otherwise it fails.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Curl test to check internet connectivity</span>
+<span class="n">e1</span><span class="p">,</span> <span class="n">output</span> <span class="o">=</span> <span class="n">shelltest</span><span class="p">(</span><span class="s2">&quot;curl google.com&quot;</span><span class="p">)</span>
+<span class="n">e2</span><span class="p">,</span> <span class="n">output</span> <span class="o">=</span> <span class="n">shelltest</span><span class="p">(</span><span class="s2">&quot;ping google.com&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">e1</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">e2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">PASSES</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Network test&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">ERRORS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Network test ERROR: &quot;</span> <span class="o">+</span> <span class="n">output</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pip-conda-test">
+<h2>Pip-Conda Test<a class="headerlink" href="#pip-conda-test" title="Permalink to this heading">#</a></h2>
+<p>The Pip-Conda Test verifies the ability to install Python packages using the pip package manager within the user’s home directory. In this specific case, it attempts to install the pytest package using pip. If the installation succeeds, the test passes, indicating that the user can install Python packages.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TEST</span> <span class="o">=</span> <span class="s2">&quot;PIP PACKAGE INSTALLATION&quot;</span>
+<span class="n">CMD</span> <span class="o">=</span> <span class="s2">&quot;pip install --user pytest&quot;</span>
+<span class="n">e</span><span class="p">,</span> <span class="n">output</span> <span class="o">=</span> <span class="n">shelltest</span><span class="p">(</span><span class="n">CMD</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">e</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">PASSES</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Pip-Conda test&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">ERRORS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Pip-Conda test ERROR: &quot;</span> <span class="o">+</span> <span class="n">output</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="git-and-ssh-test">
+<h2>Git and SSH Test<a class="headerlink" href="#git-and-ssh-test" title="Permalink to this heading">#</a></h2>
+<p>The Git and SSH Test checks whether the Git and SSH configurations are correctly set up within the Jupyter Notebook environment. It verifies the paths to the .gitconfig and ssh_config files and reports whether they exist and can be read. This test helps ensure that Git and SSH are properly configured for the user.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">e</span><span class="p">,</span> <span class="n">output</span> <span class="o">=</span> <span class="n">shelltest</span><span class="p">(</span><span class="s2">&quot;readlink -f ~/.gitconfig&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">e</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">PASSES</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Git config test&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">ERRORS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Git config test ERROR&quot;</span> <span class="o">+</span> <span class="n">output</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">e</span><span class="p">,</span> <span class="n">output</span> <span class="o">=</span> <span class="n">shelltest</span><span class="p">(</span><span class="s2">&quot;readlink -f /etc/ssh/ssh_config&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">e</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">PASSES</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;ssh config test&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">ERRORS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;ssh config test ERROR&quot;</span> <span class="o">+</span> <span class="n">output</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="conda-directory-test">
+<h2>Conda Directory Test<a class="headerlink" href="#conda-directory-test" title="Permalink to this heading">#</a></h2>
+<p>The Conda Directory Test evaluates the read and write permissions of Conda directories. It checks if the Conda base directory and Conda environment directory are both readable and writable. If these directories have the necessary permissions, the test passes, indicating that Conda can be used effectively within the environment.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">check_permissions</span><span class="p">(</span><span class="n">dir_path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check if a directory is readable and writable.&quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">ERRORS</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">readable</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">access</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">R_OK</span><span class="p">)</span>
+        <span class="n">writable</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">access</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">W_OK</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">readable</span><span class="p">,</span> <span class="n">writable</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">ERRORS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Conda directory r/w test&quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;checking permissions for </span><span class="si">{</span><span class="n">dir_path</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span>
+
+<span class="c1"># Identify the conda directories</span>
+<span class="n">conda_base_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">),</span> <span class="s2">&quot;..&quot;</span><span class="p">))</span>
+<span class="n">conda_env_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;CONDA_PREFIX&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="n">unaccessible_dirs</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">dir_name</span><span class="p">,</span> <span class="n">dir_path</span> <span class="ow">in</span> <span class="p">[(</span><span class="s1">&#39;Conda Base Directory&#39;</span><span class="p">,</span> <span class="n">conda_base_dir</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Conda Environment Directory&#39;</span><span class="p">,</span> <span class="n">conda_env_dir</span><span class="p">)]:</span>
+    <span class="n">readable</span><span class="p">,</span> <span class="n">writable</span> <span class="o">=</span> <span class="n">check_permissions</span><span class="p">(</span><span class="n">dir_path</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">readable</span> <span class="ow">and</span> <span class="n">writable</span><span class="p">):</span>
+        <span class="n">unaccessible_dirs</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">if</span> <span class="n">unaccessible_dirs</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">PASSES</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Conda directory r/w test&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ERRORS</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FAILED TESTS:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">-&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ERRORS</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PASSED TESTS:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">-&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">PASSES</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ALL TESTS PASS&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">-&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">PASSES</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>FAILED TESTS:
+-ASLR test ERROR: ASLR status is enabled with status 2 (0 is disabled, 1 is partial and 2 is full)
+-Network test ERROR: /bin/sh: 1: curl: not found
+
+
+
+PASSED TESTS:
+-Write Permission to Home Directory test
+-Pip-Conda test
+-Git config test
+-ssh config test
+</pre></div>
+</div>
+</div>
+</div>
+<p>Additional tests can be added to suit the compatability needs of users and textbooks. They may be written in this format:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the test and conditions</span>
+
+<span class="n">test_command</span> <span class="o">=</span> <span class="s2">&quot;&lt;INSERT TEST COMMAND HERE&gt;&quot;</span>
+<span class="n">expected_result</span> <span class="o">=</span> <span class="s2">&quot;&lt;INSERT EXPECTED RESULT HERE&gt;&quot;</span>
+<span class="n">environment_variables</span> <span class="o">=</span> <span class="s2">&quot;&lt;INSERT REQUIRED VARIABLES IF APPLICABLE&gt;&quot;</span>
+
+<span class="k">def</span> <span class="nf">perform_test</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">expected_result</span><span class="p">):</span>
+
+    <span class="n">execution_result</span><span class="p">,</span> <span class="n">output</span> <span class="o">=</span> <span class="n">shelltest</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">output</span> <span class="o">==</span> <span class="n">expected_result</span><span class="p">:</span>
+        <span class="c1"># If test passes, add to the PASSES array </span>
+        <span class="n">PASSES</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&lt;TEST NAME&gt; PASSED&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># If test fails, add to the ERRORS array with error message</span>
+        <span class="n">ERRORS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&lt;TEST NAME&gt; FAILED: &quot;</span> <span class="o">+</span> <span class="n">output</span><span class="p">)</span>
+
+<span class="c1"># Run test to verify success</span>
+<span class="n">perform_test</span><span class="p">(</span><span class="n">test_command</span><span class="p">,</span> <span class="n">expected_result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Test Authors: Ross Mikulskis, Jonathan Mikalov, Yuxie Ge, Yiqin Zhang, Riya Deokar</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./env_tests"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../workflow_tests/Publish.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Publish</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../github_actions/gh.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Setting up Github Actions and Quay.io</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-permission-to-home-directory-test">Write Permission to Home Directory Test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environmental-variables-test">Environmental Variables test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#network-test">Network Test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pip-conda-test">Pip-Conda Test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-and-ssh-test">Git and SSH Test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-directory-test">Conda Directory Test</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Boston University OPE Group
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
