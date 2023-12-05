@@ -9,18 +9,19 @@
 
 - To customize, create a new cell inside `All-Tests.ipynb`
   - If test fails, append the string `"Test Name" Failed` to ERRORS array with the name of the error, otherwise, pass the string to PASSES array
+  - Once test is written, call it at the bottom cell.
+ 
   - Example template:
 
     ```python
     # Define the test and conditions
+    def perform_test():
 
-    test_command = "<INSERT TEST COMMAND HERE>"
-    expected_result = "<INSERT EXPECTED RESULT HERE>"
-    environment_variables = "<INSERT REQUIRED VARIABLES IF APPLICABLE>"
+        test_command = "<INSERT TEST COMMAND HERE>"
+        expected_result = "<INSERT EXPECTED RESULT HERE>"
+        environment_variables = "<INSERT REQUIRED VARIABLES IF APPLICABLE>"
 
-    def perform_test(command, expected_result):
-
-        execution_result, output = shelltest(command)
+        execution_result, output = runshell(test_command)
 
         if output == expected_result:
             # If test passes, add to the PASSES array 
@@ -28,9 +29,6 @@
         else:
             # If test fails, add to the ERRORS array with error message
             ERRORS.append("<TEST NAME> FAILED: " + output)
-
-    # Run test to verify success
-    perform_test(test_command, expected_result)
     ```
 
 ## Test Descriptions
