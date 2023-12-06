@@ -1,12 +1,6 @@
 # Enhanced OPE
-OPE project documentation written by Ross Mikulskis. Contributions include Jonathan Mikalov's checksum test page and Riya Deokar's introduction page. This documention covers the following topics:
+In Sprint 5, our team decided to shift our focus towards comprehensive documentation and bringing our collective work into a cohesive format. This effort was part of our ongoing commitment to enhancing the Open Education Project (OPE). We recognized the importance of clear and accessible documentation for both our internal team and the broader community.
 
-**Testing**: 
-- container testing
-- environmental testing
+One of the key repositories we worked on during this sprint was ‘Open-Education-Testing’ which you can find on https://github.com/EC528-Fall-2023/Open-Education-Testing/tree/book-documentation. This repository served as a central hub for us to edit and contribute to the project’s documentation: https://ec528-fall-2023.github.io/Open-Education-Testing/features_intro.html#
 
-**Features**:
-- Jupytexmagic (a Jupyter *magic plugin* for rendering LaTeX using `pdflatex` and `svg` conversion to achieve native rendering capabilities). There is nothing else out there like this plugin. The best is Mathjax or Katex which require a lot of customization and don't have all the capabilities of the standard compiler, `pdflatex`.
-- outsourcing Gradescope autograding to OPE containers to on a working kernel to cicrumvent kernel incompatibilities between test code and the gradescope kernel
-
-Link to documentation textbook: https://ec528-fall-2023.github.io/Open-Education-Testing/features_intro.html
+By working together and dedicating ourselves to documentation, we aimed to provide a valuable resource for the OPE community and align with our commitment to open education and accessible knowledge sharing.
