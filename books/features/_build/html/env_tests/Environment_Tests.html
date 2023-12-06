@@ -195,6 +195,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../jupytexmagic/Jupytexmagic.html">Jupytexmagic</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../jupytexmagic/Getting_Started.html">Getting_Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jupytexmagic/bro.html">bro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../jupytexmagic/Extensions.html">Extensions</a></li>
 </ul>
 </li>
@@ -569,19 +570,14 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">df</span><span class="o">/</span><span class="n">vqrt_6yx3f962pmw8c8mwxyw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_30054</span><span class="o">/</span><span class="mf">3757027472.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">os</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1">#Verify environment variables are correct</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
 <span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">NB_UID</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;NB_UID&#39;</span><span class="p">])</span>
 <span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">NB_GID</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;NB_GID&#39;</span><span class="p">])</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">NB_GROUP</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;NB_GROUP&#39;</span><span class="p">]</span>
 
-<span class="nn">~/anaconda3/lib/python3.9/os.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">    </span><span class="mi">677</span>         <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">678</span>             <span class="c1"># raise KeyError with the original key value</span>
-<span class="ne">--&gt; </span><span class="mi">679</span>             <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">680</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">decodevalue</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">681</span> 
+<span class="nn">File &lt;frozen os&gt;:679,</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
 
 <span class="ne">KeyError</span>: &#39;NB_UID&#39;
 </pre></div>
@@ -658,7 +654,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">check_permissions</span><span class="p">(</span><span class="n">dir_path</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Check if a directory is readable and writable.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Check if a directory is readable and writable.&quot;&quot;&quot;</span>
     <span class="k">global</span> <span class="n">ERRORS</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">readable</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">access</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">R_OK</span><span class="p">)</span>
