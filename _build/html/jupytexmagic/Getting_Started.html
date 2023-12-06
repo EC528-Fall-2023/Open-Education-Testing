@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'jupytexmagic/Getting_Started';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Extensions" href="Extensions.html" />
+    <link rel="next" title="bro" href="bro.html" />
     <link rel="prev" title="Jupytexmagic" href="Jupytexmagic.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -195,6 +195,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Jupytexmagic.html">Jupytexmagic</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Getting_Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bro.html">bro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Extensions.html">Extensions</a></li>
 </ul>
 </li>
@@ -483,7 +484,7 @@ to display the output of <code class="docutils literal notranslate"><span class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupytexmagic in /Users/zhangyiqin/anaconda3/lib/python3.9/site-packages (0.1.2)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupytexmagic in /Users/kevinge/anaconda3/lib/python3.11/site-packages (0.1.2)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
@@ -501,16 +502,17 @@ to display the output of <code class="docutils literal notranslate"><span class=
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">df</span><span class="o">/</span><span class="n">vqrt_6yx3f962pmw8c8mwxyw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_21138</span><span class="o">/</span><span class="mf">245863205.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">jupytexmagic</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;load_ext&#39;</span><span class="p">,</span> <span class="s1">&#39;jupytexmagic&#39;</span><span class="p">)</span>
 
-<span class="o">~/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jupytexmagic</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="n">File</span> <span class="o">~/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.11</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jupytexmagic</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">10</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># Rest of your __init__.py code...</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">__version__</span> <span class="o">=</span> <span class="s1">&#39;0.1.2&#39;</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
 <span class="ne">---&gt; </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">.jupytexmagic</span> <span class="kn">import</span> <span class="n">load_ipython_extension</span>
 
-<span class="o">~/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jupytexmagic</span><span class="o">/</span><span class="n">jupytexmagic</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="n">File</span> <span class="o">~/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.11</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jupytexmagic</span><span class="o">/</span><span class="n">jupytexmagic</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">IPython.core.magic</span> <span class="kn">import</span> <span class="p">(</span><span class="n">Magics</span><span class="p">,</span> <span class="n">magics_class</span><span class="p">,</span> <span class="n">line_magic</span><span class="p">,</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span>                                 <span class="n">cell_magic</span><span class="p">,</span> <span class="n">line_cell_magic</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">SVG</span>
 <span class="ne">----&gt; </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">PyPDF2</span> <span class="kn">import</span> <span class="n">PdfReader</span>
@@ -1367,11 +1369,11 @@ PDFCROP 1.40, 2020/06/06 - Copyright (c) 2002-2020 by Heiko Oberdiek, Oberdiek P
       </div>
     </a>
     <a class="right-next"
-       href="Extensions.html"
+       href="bro.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Extensions</p>
+        <p class="prev-next-title">bro</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
