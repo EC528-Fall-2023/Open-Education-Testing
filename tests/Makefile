@@ -2,7 +2,10 @@
 rise-test: CONT_ID ?= $(shell docker ps -q | head -n 1 )
 rise-test: TOKEN ?= $(shell docker exec $(CONT_ID) jupyter lab list 2>&1 | grep -o "token=[^ ]*" | cut -d= -f2)
 rise-test:
+	python3 test_terminal.py $(TOKEN)
 	python3 rise_test.py $(TOKEN)
+	python3 screenshots_diff.py
+	python3 rise_test_slide.py $(TOKEN)
 
 checksum-test: CHECKSUM ?= $(shell make -C .. checksum )
 checksum-test: CORRECT_CHECKSUM ?= $(shell cat ../base/checksum )
