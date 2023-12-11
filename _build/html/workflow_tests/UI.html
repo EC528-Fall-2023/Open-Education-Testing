@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -140,11 +140,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
   
 
 <a class="navbar-brand logo" href="../features_intro.html">
-  
   
   
   
@@ -154,8 +152,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/tesseract_lego.svg" class="logo__image only-light" alt="OPE Features - Home"/>
-    <script>document.write(`<img src="../_static/tesseract_lego.svg" class="logo__image only-dark" alt="OPE Features - Home"/>`);</script>
+    <img src="../_static/tesseract_lego.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/tesseract_lego.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -195,7 +193,6 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../jupytexmagic/Jupytexmagic.html">Jupytexmagic</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../jupytexmagic/Getting_Started.html">Getting_Started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../jupytexmagic/bro.html">bro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../jupytexmagic/Extensions.html">Extensions</a></li>
 </ul>
 </li>
@@ -204,9 +201,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous Documentation</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Configuration</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../misc/Miscellaneous.html">Miscellaneous</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../conf/Book_Configuration.html">Book_Configuration</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../conf/books-%3Emybook-%3EMakefile.html">books/${bookname}/Makefile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conf/content-%3Emybook_config.html">content/${bookname}_config.yml</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../conf/Container_Configuration.html">Container_Configuration:</a></li>
 </ul>
 
     </div>
@@ -408,7 +410,6 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
-
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -418,7 +419,6 @@ document.write(`
   </button>
 `);
 </script>
-
 
 <script>
 document.write(`
@@ -450,11 +450,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why">Why</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what">What</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how">How</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-rise-on-jupyter-lab">Set up RISE on Jupyter Lab</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-jupyter-installation">Test Jupyter Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-we-testing">What Are We Testing?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-we-test">How Do We Test?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#github-actions-for-ui-tests">GitHub Actions for UI tests</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-with-github-actions">Setup with GitHub Actions</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-rise-functionality">Test RISE Functionality</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#test-with-locally">Test with locally</a></li>
 </ul>
@@ -474,62 +475,86 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="ui-testing-rise-and-jupyter-lab">
 <h1>UI (Testing RISE and Jupyter Lab)<a class="headerlink" href="#ui-testing-rise-and-jupyter-lab" title="Permalink to this heading">#</a></h1>
-<section id="why">
-<h2>Why<a class="headerlink" href="#why" title="Permalink to this heading">#</a></h2>
-<p>In the Open Education Platform (OPE), Jupyter Lab serves as the primary user interface. Rigorous testing is essential for data processing accuracy and reliability, essential for research and analytical workflows. By testing Jupyter Notebooks, we ensure that all functionalities, including code cell execution, operate correctly and integrate seamlessly with various tools and libraries across different platforms.</p>
-<p>Additionally, OPE employs RISE to convert Jupyter notebooks into slideshows, enhancing interactive presentations. This feature is widely used in educational and professional settings for presenting complex data and analyses. Testing RISE is crucial to verify that it operates as intended and ensures that these presentations are reliable and effective in conveying information accurately.</p>
-<p>Overall, comprehensive testing of both Jupyter Notebooks and RISE is integral to maintain the platform’s effectiveness and reliability.</p>
-</section>
-<section id="what">
-<h2>What<a class="headerlink" href="#what" title="Permalink to this heading">#</a></h2>
+<p>In the Open Education (OPE) Platform, Jupyter Lab serves as the primary user interface. The integrity of our data processing, critical for both research and analytical workflows, depends on thorough testing. By testing Jupyter Lab, we ensure that all functionalities, including code cell execution, operate correctly and integrate seamlessly with various tools and libraries across different platforms.</p>
+<p>Furthermore, OPE employs RISE to convert Jupyter notebooks into slideshows, enhancing interactive presentations. This feature is widely used in educational and professional settings for presenting complex data and analyses. Testing RISE is crucial to verify that it operates as intended and ensures that these presentations are reliable and effective in conveying information accurately.</p>
+<p>Overall, comprehensive testing of Jupyter Lab and RISE is integral to maintaining the platform’s effectiveness and reliability.</p>
+<section id="what-are-we-testing">
+<h2>What Are We Testing?<a class="headerlink" href="#what-are-we-testing" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p><strong>Jupyter Notebook Testing:</strong></p></li>
+<li><p><strong>UI Testing:</strong></p></li>
 </ol>
-<ul class="simple">
-<li><ul>
-<li><p>The testing process for Jupyter Notebooks includes confirming the correct installation of specific versions and validating that all code cells execute without errors.</p></li>
-<li><p>Testing extends to verifying users’ ability to install packages via <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p></li>
-<li><p>Verifying users have the necessary permissions to access Conda functionalities is essential.</p></li>
-</ul>
-</li>
-</ul>
+<p>This workflow automates several processes: setting up an environment, running JupyterLab within a container, testing the RISE extension for JupyterLab, conducting UI tests, and performing visual comparisons of screenshots. The UI testing is critical, as it ensures that new updates do not break or undesirably alter existing functionalities.</p>
 <ol class="arabic simple" start="2">
 <li><p><strong>RISE Functionality Testing:</strong></p></li>
 </ol>
 <ul class="simple">
-<li><ul>
 <li><p><strong>Content Integrity and Visual Accuracy:</strong> Verifying that the content’s integrity is maintained during its conversion from a notebook to a slideshow and that visual outputs are accurately displayed. This is essential for ensuring that the presentations effectively and accurately convey information.</p></li>
 <li><p><strong>Interactive Feature Verification:</strong> Since RISE supports interactive elements like real-time code execution, testing these features is crucial to ensure smooth functionality during presentations.</p></li>
 <li><p><strong>Compatibility and Stability:</strong> RISE testing includes examining compatibility with different versions of Jupyter and assessing stability during operation. This step is vital to avoid potential issues arising from version mismatches or operational instabilities.</p></li>
 <li><p><strong>Error-Free Operation:</strong> All elements within RISE must operate without errors to guarantee a practical and seamless learning experience.</p></li>
 </ul>
-</li>
-</ul>
-<p>Overall, thorough testing of Jupyter Notebook installations and RISE functionalities is integral to maintaining the high standards of reliability and efficiency in the Open Education Platform.</p>
 </section>
-<section id="how">
-<h2>How<a class="headerlink" href="#how" title="Permalink to this heading">#</a></h2>
-<section id="set-up-rise-on-jupyter-lab">
-<h3>Set up RISE on Jupyter Lab<a class="headerlink" href="#set-up-rise-on-jupyter-lab" title="Permalink to this heading">#</a></h3>
+<section id="how-do-we-test">
+<h2>How Do We Test?<a class="headerlink" href="#how-do-we-test" title="Permalink to this heading">#</a></h2>
+<section id="github-actions-for-ui-tests">
+<h3>GitHub Actions for UI tests<a class="headerlink" href="#github-actions-for-ui-tests" title="Permalink to this heading">#</a></h3>
+<p>The GitHub Actions workflow, located in the <a class="reference external" href="https://github.com/YiqinZhang/OPE-Testing/blob/0cb63464bb8a8c3962c6d3f783e4d8d59f7fc0ef/.github/workflows/Master_Container_Test.yml#L249C2-L249C2">.github/workflows/Master_Container_Test.yml</a>, is designed to conduct UI tests in a JupyterLab environment. This workflow comprises the following steps:</p>
+<ol class="arabic">
+<li><p><strong>Setting up the Environment</strong>: It runs on the latest Ubuntu version and begins by checking out the necessary code from a GitHub repository.</p></li>
+<li><p><strong>Python and Browser Setup</strong>: The workflow sets up Python 3.9 and installs Chromium, a web browser essential for running Selenium-based browser tests.</p></li>
+<li><p><strong>Installing Python Dependencies</strong>: It upgrades pip and installs required Python packages including Selenium and WebDriver Manager. The version of ChromeDriver, a key component for browser automation, is also verified.</p></li>
+<li><p><strong>Run JupyterLab Inside Container</strong>: The workflow pulls a beta version of the Docker image and runs the JupyterLab environment inside a container.</p></li>
+<li><p><strong>Executing RISE Tests</strong>: Executes RISE extension tests in JupyterLab. These tests involve both functional testing of the extension and capturing screenshots for UI verification.</p>
 <p>In the <a class="reference external" href="https://github.com/OPEFFORT/OPE-Testing/blob/5df4c895e9e30ee24b36a4b295a5a9613d7853d4/base/Dockerfile#L49C6-L49C6">Dockerfile</a> ,<code class="docutils literal notranslate"><span class="pre">jupyterlab-rise</span></code> is installed directly using pip with the command <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">jupyterlab_rise</span></code>.</p>
+</li>
+<li><p><strong>Visual Comparison Testing</strong>: Finally, the workflow performs a screenshot comparison test to identify any discrepancies or changes in the UI, ensuring visual consistency and correct functionality.</p></li>
+</ol>
+<p><img alt="Screenshot 2023-12-04 at 01 10 53" src="https://github.com/YiqinZhang/OPE-Testing/assets/55336328/2a61c1e4-2cb0-4bb0-8771-f771b5a97208" /></p>
+<section id="setup-with-github-actions">
+<h4>Setup with GitHub Actions<a class="headerlink" href="#setup-with-github-actions" title="Permalink to this heading">#</a></h4>
+<p>To ensure all necessary libraries and dependencies are included, update <code class="docutils literal notranslate"><span class="pre">tests/requirement.txt</span></code> and <code class="docutils literal notranslate"><span class="pre">base/pip_pkgs</span></code>. For instance, add libraries like <code class="docutils literal notranslate"><span class="pre">selenium</span></code>, <code class="docutils literal notranslate"><span class="pre">webdriver_manager</span></code>, and <code class="docutils literal notranslate"><span class="pre">nbformat</span></code> to <code class="docutils literal notranslate"><span class="pre">base/pip_pkgs</span></code> and <code class="docutils literal notranslate"><span class="pre">tests/requirement.txt</span></code> . This ensures they are automatically installed in the Docker container during initialization.</p>
+<a class="reference internal image-reference" href="https://github.com/YiqinZhang/OPE-Testing/assets/55336328/93b4c3a6-7a2f-4356-87b2-81009af3c4ff"><img alt="Screenshot 2023-11-29 at 19 28 54" src="https://github.com/YiqinZhang/OPE-Testing/assets/55336328/93b4c3a6-7a2f-4356-87b2-81009af3c4ff" style="width: 655px;" /></a>
 </section>
-<section id="test-jupyter-installation">
-<h3>Test Jupyter Installation<a class="headerlink" href="#test-jupyter-installation" title="Permalink to this heading">#</a></h3>
-<p>To ensure that all necessary libraries and dependencies are correctly installed, we use a Jupyter notebook instance.  The test ensures that all required imports in the  Jupyter notebook instance are installed and functioning without errors.</p>
 </section>
 <section id="test-rise-functionality">
 <h3>Test RISE Functionality<a class="headerlink" href="#test-rise-functionality" title="Permalink to this heading">#</a></h3>
-<p>We employ Selenium for the RISE test to simulate opening a Jupyter Notebook file. The test then captures screenshots to confirm the correct functioning of RISE and visually verify its performance within a  Jupyter environment.</p>
+<p>We employ Selenium for the RISE test to simulate opening a Jupyter Notebook file. The test then captures screenshots to confirm the correct functioning of RISE and visually verify its performance within a Jupyter environment. The Python scripts are executable from the command line, requiring a JupyterLab token as an input parameter.</p>
+<p><a class="reference external" href="https://github.com/YiqinZhang/OPE-Testing/blob/container-base-ope/tests/rise_test.py">rise_test.py</a>: This Python script, sets up a Selenium WebDriver and then navigates to a JupyterLab instance, identified by a URL and token, and performs several actions: creating a new notebook, triggering the RISE extension to preview a slideshow, checking the functionality of the full-screen button in the RISE interface and taking screenshots.</p>
+<p><a class="reference external" href="https://github.com/YiqinZhang/OPE-Testing/blob/container-base-ope/tests/rise_test_slide.py">rise_test_slide.py</a>: This Python script programmatically creates a new Jupyter notebook (<code class="docutils literal notranslate"><span class="pre">example_notebook.ipynb</span></code>) with predefined slides. Each slide, crafted with markdown cells, includes specific content, images, and metadata. The code proceeds to open this notebook in JupyterLab, activate the RISE presentation mode, and take screenshots at various stages (main page, new notebook page, and RISE preview).</p>
+<p><a class="reference external" href="https://github.com/YiqinZhang/OPE-Testing/blob/container-base-ope/tests/rise_test_terminal.ipynb">rise_test_terminal.py</a>: The script automates the testing of a terminal session within a JupyterLab environment using Selenium WebDriver.</p>
+<p>Initially, it navigates to the Launcher and locates the Terminal icon. Upon clicking this icon, a new terminal session is opened. The script then proceeds to send a command, <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">Hello</span> <span class="pre">World</span></code>. Following this, it verifies the command’s output by checking for the text ‘Hello World’ within the terminal’s output. The successful detection of this text serves as an assertion that the output is as expected, thereby confirming the terminal’s functionality in JupyterLab environment.</p>
+<p><a class="reference external" href="https://github.com/YiqinZhang/OPE-Testing/blob/container-base-ope/tests/screenshots_diff.py">screenshots_diff.py</a>: The code employs the Python Imaging Library (PIL) for image processing and comparison. It defines two functions: <code class="docutils literal notranslate"><span class="pre">is_image_blank</span></code> to check if an image is blank and <code class="docutils literal notranslate"><span class="pre">rms_diff</span></code>, a function that calculates the root mean square error between two images. This error quantifies the extent of their differences and minimizes false positives during image comparisons.
+If both images are not blank, it resizes the test image to match the base image (if their sizes differ) and then calculates the RMS error between them. Based on a predefined threshold (in this case, an RMS error greater than 10), the script determines if the images are identical, very similar, or different, and prints the appropriate message.</p>
+<p><a class="reference external" href="https://github.com/YiqinZhang/OPE-Testing/blob/container-base-ope/tests/run_rise_test.ipynb">run_rise_test.ipynb</a>: Provide an IPython Notebook (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) to facilitate interactive code execution and control.</p>
 <section id="test-with-locally">
 <h4>Test with locally<a class="headerlink" href="#test-with-locally" title="Permalink to this heading">#</a></h4>
 <p>To effectively test RISE functionality within Jupyter Lab, our process involves the following steps:</p>
 <ol class="arabic">
-<li><p><strong>Retrieve Jupyter Lab Token:</strong> First, obtain a <code class="docutils literal notranslate"><span class="pre">token</span></code> from a Jupyter Lab instance.</p></li>
-<li><p><strong>Execute RISE Test Script:</strong> Run the command <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">rise-test.py</span> <span class="pre">{token}</span></code>. This command initiates the opening of the Jupyter Lab instance and captures a screenshot of the launcher page.</p></li>
-<li><p><strong>Create and Capture Notebook File:</strong> After clicking the Notebook launch icon, a new Jupyter Notebook file is created. We then take a screenshot for comparison purposes.</p></li>
-<li><p><strong>Activate and Document RISE Function:</strong> The test proceeds to locate and double-click the RISE icon, triggering the RISE function. A screenshot is taken at this stage to document the functionality.</p></li>
-<li><p><strong>Test Fullscreen Feature:</strong> The process includes searching for and activating the fullscreen button to display the slideshow in fullscreen mode.</p>
-<p>Successfully completing these steps and comparing the three screenshots without any discrepancies confirms that RISE is functioning  effectively within the Jupyter Lab environment.</p>
+<li><p><strong>Retrieve Jupyter Lab Token:</strong> First, obtain a <code class="docutils literal notranslate"><span class="pre">token</span></code> from a Jupyter Lab instance.
+<img alt="Screenshot 2023-11-27 at 14 56 42" src="https://github.com/YiqinZhang/OPE-Testing/assets/55336328/9c699718-6393-4596-b13a-a8bef8cd086c" /></p></li>
+<li><p><strong>Execute RISE Test Script:</strong> Run the command <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">rise-test.py</span> <span class="pre">{token}</span></code>. This command initiates the opening of the Jupyter Lab instance and captures a screenshot of the launcher page.</p>
+<p><img alt="Screenshot 2023-11-27 at 15 11 20" src="https://github.com/YiqinZhang/OPE-Testing/assets/55336328/3a9a9cb2-4f89-4b08-8fe5-94be837e03ad" /></p>
+<p>If you are using the Jupyter notebook version, named <code class="docutils literal notranslate"><span class="pre">run_rise_test.ipynb</span></code>, simply replace <code class="docutils literal notranslate"><span class="pre">{token}</span></code> with your specific token and then proceed to execute the cells within the notebook.</p>
+<p><img alt="Screenshot 2023-11-27 at 15 23 04" src="https://github.com/YiqinZhang/OPE-Testing/assets/55336328/577249e3-7c97-4344-8e86-0a7352e6d619" /></p>
+</li>
+<li><p><strong>Create and Capture Notebook File:</strong> Following the simulated click on the Notebook launch icon, a new Jupyter Notebook file is automatically created.. We then take a screenshot for comparison purposes.
+<img alt="new_nb_screenshot" src="https://github.com/YiqinZhang/OPE-Testing/assets/55336328/78c9470a-eff9-4ec0-b3ab-94eaeaa7afbf" /></p></li>
+<li><p><strong>Activate and Document RISE Function:</strong> The test proceeds to locate and double-click the RISE icon, triggering the RISE function. A screenshot is taken at this stage to document the functionality.
+<img alt="rise_screenshot" src="https://github.com/YiqinZhang/OPE-Testing/assets/55336328/26f8a25b-6574-4ba3-9ddf-e341539e0c0a" /></p></li>
+<li><p><strong>Test Fullscreen Feature:</strong> The process includes searching for and activating the fullscreen button to display the slideshow in fullscreen mode.</p></li>
+<li><p><strong>Screenshots Comparasion:</strong><br />
+Successfully completing these steps and comparing the three screenshots without any discrepancies confirms that RISE is functioning effectively within the Jupyter Lab environment.</p>
+<p><img alt="Screenshot 2023-11-27 at 16 43 12" src="https://github.com/YiqinZhang/OPE-Testing/assets/55336328/d703435e-541e-469a-b75c-45de0109f806" /></p>
+<p>If the screenshots are either blank or deviate from the predefined images, the system will display error messages as follows:</p>
+<p><img alt="Screenshot 2023-12-04 at 01 13 56" src="https://github.com/YiqinZhang/OPE-Testing/assets/55336328/1cfcb695-1e43-4fd6-8418-5c14bc05a078" /></p>
+</li>
+<li><p><strong>Enhanced RISE Testing with Sample Slides:</strong></p>
+<p>Generate sample slides containing text, images, and notes, separated by dividing lines through scripts. Utilize Selenium to automate the opening of these slides and their conversion into a slideshow format. Then, capture screenshots of the slideshow for comparison against predefined slide templates to assess the visual effects.</p>
+<p><img alt="new_nb_screenshot 8" src="https://github.com/YiqinZhang/OPE-Testing/assets/55336328/fbcb0e1f-7386-4a28-a845-3ed87bac0b31" />
+<em>Sample notebook slides</em></p>
+<p><img alt="rise_screenshot 8" src="https://github.com/YiqinZhang/OPE-Testing/assets/55336328/112d0594-2c81-4b01-ac23-f2e48f6a5bf6" />
+<em>Sample slideshow</em></p>
+<p><img alt="Screenshot 2023-11-27 at 14 25 47" src="https://github.com/YiqinZhang/OPE-Testing/assets/55336328/224279d2-584f-425f-971b-cf619fdf6595" /></p>
 </li>
 </ol>
 </section>
@@ -565,7 +590,7 @@ document.write(`
               
               
                 <footer class="prev-next-footer">
-                  
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="Size_and_time.html"
@@ -600,11 +625,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why">Why</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what">What</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how">How</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-rise-on-jupyter-lab">Set up RISE on Jupyter Lab</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-jupyter-installation">Test Jupyter Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-we-testing">What Are We Testing?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-we-test">How Do We Test?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#github-actions-for-ui-tests">GitHub Actions for UI tests</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-with-github-actions">Setup with GitHub Actions</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-rise-functionality">Test RISE Functionality</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#test-with-locally">Test with locally</a></li>
 </ul>
@@ -632,7 +658,6 @@ By Boston University OPE Group
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
       © Copyright 2023.
@@ -659,8 +684,8 @@ By Boston University OPE Group
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>
