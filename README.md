@@ -81,7 +81,8 @@ These user personas represent a diverse set of users who can benefit from the fu
 **Architecture**
 We first build the container image, test it with a github workflow, then publish it. In the second phase, we run the container on Red Hat OpenShift and run `ope test` to verify that the environment is set up properly (e.g. is has internet connection, proper UID/GID, proper permissions).
 
-![OPE testing 2](https://github.com/EC528-Fall-2023/Open-Education-Testing/assets/91744036/294fc4ba-f848-48d7-b9d2-f0759e440483)
+<img width="1421" alt="Screenshot 2023-12-11 at 1 29 49 PM" src="https://github.com/EC528-Fall-2023/Open-Education-Testing/assets/91744036/ef5105e4-c858-40a7-a898-c6e1bb75204d">
+
 
 Throughout the duration of this project, we will be contributing directly to open education tests. These tests directly involve the functionality of jupyter notebooks and other supported platforms.
 
