@@ -36,13 +36,16 @@ parts:
   - file: jupytexmagic/Jupytexmagic
     sections: 
     - file: jupytexmagic/Getting_Started
-    - file: jupytexmagic/bro
     - file: jupytexmagic/Extensions
   - file: gradescope_autograder/Gradescope_Autograder
     sections: 
     - file: gradescope_autograder/Extensions
 
-- caption: 'Miscellaneous Documentation'
+- caption: 'Configuration'
   numbered: false
   chapters:
-  - file: misc/Miscellaneous
+  - file: conf/Book_Configuration
+    sections: 
+    - file: conf/books->mybook->Makefile
+    - file: conf/content->mybook_config
+  - file: conf/Container_Configuration
