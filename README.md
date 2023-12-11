@@ -79,11 +79,11 @@ These user personas represent a diverse set of users who can benefit from the fu
 ## 4. Solution Concept
 
 **Architecture**
-![OPE testing](https://github.com/EC528-Fall-2023/Open-Education-Testing/assets/91744036/cddb0b81-1cd1-4eed-b9cb-b086e53b49f9)
+We first build the container image, test it with a github workflow, then publish it. In the second phase, we run the container on Red Hat OpenShift and run `ope test` to verify that the environment is set up properly (e.g. is has internet connection, proper UID/GID, proper permissions).
 
-![](images/A2.png)
+![OPE testing 2](https://github.com/EC528-Fall-2023/Open-Education-Testing/assets/91744036/294fc4ba-f848-48d7-b9d2-f0759e440483)
 
-Throughout the duration of this project, we will be contributing directly to open education tests. These tests directly involve the functionality of jupyter notebooks and other supported platforms. They do not involve server-side support, such as containerized support and remote access.
+Throughout the duration of this project, we will be contributing directly to open education tests. These tests directly involve the functionality of jupyter notebooks and other supported platforms.
 
 1. **Test Notebook Template**
 
