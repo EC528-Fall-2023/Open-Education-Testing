@@ -44,7 +44,7 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex)
  \write18 enabled.
 entering extended mode
-(/var/folders/x1/frlndvdd2158sbgrcspfnv_w0000gn/T/tmprjewxxaa/temp.tex
+(/var/folders/x1/frlndvdd2158sbgrcspfnv_w0000gn/T/tmpt9h6cpqi/temp.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22>
 (/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/standalone/
@@ -95,8 +95,8 @@ l.7     \begin{bmatrix}
 l.7     \begin{bmatrix}
                        
 !  ==> Fatal error occurred, no output PDF file produced!
-Transcript written on /var/folders/x1/frlndvdd2158sbgrcspfnv_w0000gn/T/tmprjewx
-xaa/temp.log.
+Transcript written on /var/folders/x1/frlndvdd2158sbgrcspfnv_w0000gn/T/tmpt9h6c
+pqi/temp.log.
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
@@ -127,5 +127,5 @@ File [0;32m~/miniconda3/lib/python3.10/subprocess.py:526[0m, in [0;36mrun[0;
 [1;32m    527[0m                                  output[38;5;241m=[39mstdout, stderr[38;5;241m=[39mstderr)
 [1;32m    528[0m [38;5;28;01mreturn[39;00m CompletedProcess(process[38;5;241m.[39margs, retcode, stdout, stderr)
 
-[0;31mCalledProcessError[0m: Command '['pdflatex', '-shell-escape', '-output-directory', '/var/folders/x1/frlndvdd2158sbgrcspfnv_w0000gn/T/tmprjewxxaa', '/var/folders/x1/frlndvdd2158sbgrcspfnv_w0000gn/T/tmprjewxxaa/temp.tex']' returned non-zero exit status 1.
+[0;31mCalledProcessError[0m: Command '['pdflatex', '-shell-escape', '-output-directory', '/var/folders/x1/frlndvdd2158sbgrcspfnv_w0000gn/T/tmpt9h6cpqi', '/var/folders/x1/frlndvdd2158sbgrcspfnv_w0000gn/T/tmpt9h6cpqi/temp.tex']' returned non-zero exit status 1.
 
