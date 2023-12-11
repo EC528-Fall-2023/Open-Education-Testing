@@ -1,5 +1,6 @@
 # Open Education Project Systems Testing
 
+https://docs.google.com/presentation/d/1NT8QTjVdMfSiiE2hQwSKrBNbvGHKlGa80si8d4JrDDg/edit#slide=id.g2a5c960c1cd_1_296
 **Team Members**: Yuxi Ge, Jonathan Mikalov, Riya Deokar, Ross Mikulskis, Yiqin Zhang
 
 **Mentor**: Isaiah Stapleton
