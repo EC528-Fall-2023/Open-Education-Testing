@@ -146,7 +146,7 @@ Release planning section describes how the project will deliver incremental sets
 Here are a couple repos that are important to our project, forked from the OPE repos:
 
 - [https://github.com/rkulskis/ope-quay](https://github.com/rkulskis/ope-quay) (fork of [https://github.com/OPEFFORT/OPE-Testing](https://github.com/OPEFFORT/OPE-Testing))
-- [Our documentation formatted as an OPE book](https://rkulskis.github.io/enhanced-ope/features_intro.html)
+- [Our documentation formatted as an OPE book]([https://rkulskis.github.io/enhanced-ope/features_intro.html](https://ec528-fall-2023.github.io/Open-Education-Testing/features_intro.html#))
 - [UI/RISE tests](https://github.com/YiqinZhang/OPE-Testing/tree/container-base-ope/tests)
 
 ## Videos
