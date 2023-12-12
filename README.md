@@ -1,6 +1,5 @@
 # Open Education Project Systems Testing
 
-https://docs.google.com/presentation/d/1NT8QTjVdMfSiiE2hQwSKrBNbvGHKlGa80si8d4JrDDg/edit#slide=id.g2a5c960c1cd_1_296
 **Team Members**: Yuxi Ge, Jonathan Mikalov, Riya Deokar, Ross Mikulskis, Yiqin Zhang
 
 **Mentor**: Isaiah Stapleton
@@ -164,3 +163,4 @@ Here are a couple repos that are important to our project, forked from the OPE r
 - **[Sprint 3 Slides](https://docs.google.com/presentation/d/1KDC8MQQU-c8FvkvjlLuOMwSis7lFfOR7dl87srLiVJI/edit)**
 - **[Sprint 4 Slides](https://docs.google.com/presentation/d/1HK9a5vZwhh9qlOvg9w80FTByqJsgYASfIkLrn7RkrcI/edit?usp=sharing)**
 - **[Sprint 5 Slides](https://docs.google.com/presentation/d/1-K1lTJiUGgStfITrlwY8ZA3AZIKqTuAm6VI3op20L5Q/edit?usp=sharing)**
+- **[Final Presentation](https://docs.google.com/presentation/d/1NT8QTjVdMfSiiE2hQwSKrBNbvGHKlGa80si8d4JrDDg/edit#slide=id.g2a5c960c1cd_1_296)**
